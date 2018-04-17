@@ -1,3 +1,4 @@
-# My Awesome Book
+# BẢO MẬT HỆ THỐNG
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+Tất cả những gì cần làm để bảo mật hệ thống \(network, os, software, ...\) và có thể truy vết khi có sự cố
+
