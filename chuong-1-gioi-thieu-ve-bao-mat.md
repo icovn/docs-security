@@ -4,6 +4,8 @@
 
 Đối với hệ thống công nghệ thông tin **bảo mật** thường là ngăn chặn truy cập trái phép \(vd: truy cập server, database, ... khi không được cho phép\), sử dụng dịch vụ vượt quyền cho phép \(vd: người dùng bình thường cố thực thi các lệnh như người dùng quản trị, ...\)
 
+Để hỗ trợ cho việc bảo mật và quản trị hệ thống ta có thể sử dụng các ứng dụng HIDS \(host-based intrusion detection system\) vaf NIDS \(network-based intrusion detection system\)
+
 # 2. Tổ chức
 
 | Tên | Mô tả |
@@ -18,7 +20,7 @@ Danh sách [đầy đủ](https://cybersecurityventures.com/cybersecurity-associ
 
 # 3. Các lỗi bảo mật hay gặp
 
-* Top 10 lỗi hay gặp trên nền tảng web năm 2017 \([web version](https://www.owasp.org/index.php/Top_10-2017_Top_10), pdf version\)
+* Top 10 lỗi hay gặp trên nền tảng web năm 2017 \([web version](https://www.owasp.org/index.php/Top_10-2017_Top_10), [pdf version](https://github.com/icovn/docs-security/blob/master/OWASP_Top_10-2017_%28en%29.pdf.pdf)\)
 
 
 
