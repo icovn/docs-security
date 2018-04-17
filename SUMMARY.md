@@ -6,7 +6,7 @@
 * [Chương 3 - Web server](chuong-3-web-server.md)
 * [Chương 4 - Software](chuong-4-software.md)
 * [Chương 5 - Network](chuong-5-network.md)
-* Chương 6 - Trace
+* [Chương 6 - Trace](chuong-6-trace.md)
 * [Tham khảo](tham-khao.md)
 * [Tool](tool.md)
 
