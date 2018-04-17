@@ -10,7 +10,7 @@ OSSEC - Open Source HIDS SECurity
 
 * Cài đặt thư viện \(gcc, make, ...\)
 
-sudo apt-get install build-essential
+sudo apt-get install build-essential libmysqlclient-dev
 
 * Cài đặt ossec-server
 
@@ -28,21 +28,59 @@ sudo apt-get install build-essential
 
 /var/ossec/bin/ossec-control stop
 
-* Cài đặt Apache, MySQL, PHP
+* **Cài đặt UI**
+  * Cài đặt Apache, MySQL, PHP
 
-sudo apt-get install apache2 mysql-server php php-{bcmath,bz2,intl,gd,mbstring,mcrypt,mysql,zip} libapache2-mod-php -y
+  sudo apt-get install apache2 mysql-server php php-{bcmath,bz2,intl,gd,mbstring,mcrypt,mysql,zip} libapache2-mod-php -y
 
-sudo systemctl enable apache2.service
+  sudo systemctl enable apache2.service
 
-sudo systemctl enable mysql.service
+  sudo systemctl enable mysql.service
 
-* Cài đặt UI
+  * Cài đặt UI và cấu hình
 
-./ossec-ui-install.sh
+  ./ossec-ui-install.sh
 
-* Restart apache
+  * Restart apache
 
-systemctl restart apache2
+  systemctl restart apache2
+
+* **Cài đặt Analogi Web Dashboard**
+  * Tạo database
+
+  mysql -u root -p
+  CREATE DATABASE ossec;
+  GRANT ALL PRIVILEGES ON ossec.\* TO 'ossecuser'@'%' IDENTIFIED BY 'ossec' WITH GRANT OPTION;
+  GRANT ALL PRIVILEGES ON ossec.\* TO 'ossecuser'@'localhost' IDENTIFIED BY 'ossec' WITH GRANT OPTION;
+
+  * Cấu hình database cho ossec
+
+  vi /var/ossec/etc/ossec.conf
+  \#thêm đoạn sau
+  &lt;database\_output&gt;
+  	&lt;hostname&gt;127.0.0.1&lt;/hostname&gt;
+  	&lt;username&gt;ossecuser&lt;/username&gt;
+  	&lt;password&gt;ossec&lt;/password&gt;
+  	&lt;database&gt;ossec&lt;/database&gt;
+  	&lt;type&gt;mysql&lt;/type&gt;
+  &lt;/database\_output&gt;
+
+  * import database
+
+  mysql -u root -p ossec &lt; /tmp/ossec-hids-2.9.3/src/os\_dbd/mysql.schema
+
+  * Enable database và restart
+
+  /var/ossec/bin/ossec-control enable database
+  /var/ossec/bin/ossec-control restart
+
+  * Cài đặt analogi UI
+
+  ./ossec-analogi.sh
+
+  * Restart apache
+
+  systemctl restart apache2
 
 # 3. Vận hành
 
