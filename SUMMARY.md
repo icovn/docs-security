@@ -7,6 +7,7 @@
 * [Chương 4 - Software](chuong-4-software.md)
 * [Chương 5 - Network](chuong-5-network.md)
 * [Chương 6 - Trace](chuong-6-trace.md)
-* [Tham khảo](tham-khao.md)
-* [Tool](tool.md)
+* [Chương 7 - Vận hành](chuong-7-van-hanh.md)
+* [Chương 8 - Giám sát cảnh báo](chuong-8-giam-sat-canh-bao.md)
+* Chương 7 - Vận hành
 
