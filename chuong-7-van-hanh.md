@@ -153,6 +153,7 @@ vi /var/ossec/etc/ossec.conf
 
 ```
 vi /var/ossec/etc/local_internal_options.conf
+#thêm --> logcollector.remote_commands=1
 ```
 
 * Restart agent
