@@ -37,6 +37,12 @@ sudo apt-get install wazuh-api -y
 vi /var/ossec/etc/shared/default/agent.conf
 ```
 
+* Kiểm tra config cho agent
+
+```
+/var/ossec/bin/verify-agent-conf
+```
+
 * Bổ sung custom rule
 
 ```
