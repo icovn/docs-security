@@ -328,8 +328,6 @@ f:$sshd_file -> r:^#\s*PermitRootLogin;
 
 ### 6.4. Policy monitoring
 
-
-
 ### 6.3. Khác
 
 * Bổ sung custom rule
