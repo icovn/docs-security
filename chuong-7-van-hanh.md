@@ -60,17 +60,34 @@ sudo apt-get update
 
 ```
 sudo apt-get install elasticsearch=6.2.3 -y
-systemctl daemon-reload
-systemctl enable elasticsearch.service
-systemctl start elasticsearch.service
+sudo systemctl daemon-reload
+sudo systemctl enable elasticsearch.service
+sudo systemctl start elasticsearch.service
 ```
 
+* Load the Wazuh template for Elasticsearch
 
+```
+sudo curl https://raw.githubusercontent.com/wazuh/wazuh/3.2/extensions/elasticsearch/wazuh-elastic6-template-alerts.json | curl -XPUT 'http://localhost:9200/_template/wazuh' -H 'Content-Type: application/json' -d @-
+```
 
-* Start agent
+* Cài đặt Logstash
 
-/var/ossec/bin/ossec-control restart
+```
+sudo apt-get install logstash=1:6.2.3-1
+sudo curl -so /etc/logstash/conf.d/01-wazuh.conf https://raw.githubusercontent.com/wazuh/wazuh/3.2/extensions/logstash/01-wazuh-local.conf
+sudo systemctl daemon-reload
+sudo systemctl enable logstash.service
+sudo systemctl start logstash.service
+```
 
+* Load configuration
+
+```
+
+```
+
+* 
 # 4. Vận hành
 
 
