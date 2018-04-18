@@ -7,7 +7,7 @@
 * [Chương 4 - Software](chuong-4-software.md)
 * [Chương 5 - Network](chuong-5-network.md)
 * [Chương 6 - Trace](chuong-6-trace.md)
-* Chương 7 - Cài đặt
+* [Chương 7 - Cài đặt](chuong-7-cai-dat.md)
   * [1 - Server giám sát](1-server-giam-sat.md)
   * [2 - Server được giám sát](2-server-duoc-giam-sat.md)
 * [Chương 8 - Vận hành](chuong-8-van-hanh.md)
