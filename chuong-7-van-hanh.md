@@ -19,7 +19,7 @@ sudo apt-get install wazuh-manager -y
 * Cài đặt Wazuh API
 
 ```
-curl -sL https://deb.nodesource.com/setup_6.x 
+sudo curl -sL https://deb.nodesource.com/setup_6.x 
 sudo apt-get install nodejs -y
 sudo apt-get install wazuh-api -y
 ```
