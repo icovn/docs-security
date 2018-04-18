@@ -110,7 +110,10 @@ vi /var/ossec/etc/internal\_options.conf
 
 \#logcollector.remote\_commands đặt là 1
 
-* 
+* Start agent
+
+/var/ossec/bin/ossec-control restart
+
 # 4. Vận hành
 
 
