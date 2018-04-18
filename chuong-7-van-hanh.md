@@ -123,7 +123,7 @@ sudo apt-get update
 * Cài đặt Wazuh agent
 
 ```
-sudo apt-get install wazuh-agent
+sudo apt-get install wazuh-agent -y
 ```
 
 # 4. Vận hành
