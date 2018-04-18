@@ -13,7 +13,8 @@
 * [Chương 8 - Giám sát cảnh báo](chuong-8-giam-sat-canh-bao.md)
 * [Tham khảo](tham-khao.md)
   * [OSSEC](tham-khao/ossec.md)
+  * [Tool](tool.md)
+  * [Tool](tool.md)
   * [Wazuh](tham-khao/wazuh.md)
-* Tool
-* [Tool](tool.md)
+  * [Tool](tham-khao/tool.md)
 
