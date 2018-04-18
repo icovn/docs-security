@@ -177,9 +177,9 @@ echo "HuyNQ12Secret" > /var/ossec/etc/authd.pass
 * Đăng ký agent
 
 ```
-/var/ossec/bin/agent-auth -m 118.70.223.163 -P "HuyNQ12Secret" -A LIVE-STREAM-FPT-210.245.3.67
-/var/ossec/bin/agent-auth -m 118.70.223.163 -P "HuyNQ12Secret" -A LIVE-STREAM-FPT-210.245.3.69
-/var/ossec/bin/agent-auth -m 118.70.223.163 -P "HuyNQ12Secret" -A LIVE-STREAM-FPT-118.70.223.163
+/var/ossec/bin/agent-auth -m 118.70.223.163 -P "MySecret" -A LIVE-STREAM-FPT-210.245.3.67
+/var/ossec/bin/agent-auth -m 118.70.223.163 -P "MySecret" -A LIVE-STREAM-FPT-210.245.3.69
+/var/ossec/bin/agent-auth -m 118.70.223.163 -P "MySecret" -A LIVE-STREAM-FPT-118.70.223.163
 ```
 
 * Fix cấu hình ossec ở agent
