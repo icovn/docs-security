@@ -220,5 +220,9 @@ vi /var/ossec/etc/ossec.conf
 /var/ossec/bin/ossec-control restart
 ```
 
+# 7. Cấu hình active response
+
+Tham khảo https://blog.wazuh.com/blocking-attacks-active-response/
+
 
 
