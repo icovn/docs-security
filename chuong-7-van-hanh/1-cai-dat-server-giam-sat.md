@@ -194,6 +194,65 @@ https://documentation.wazuh.com/current/installation-guide/installing-elastic-st
 
 # 3. Tích hợp với email
 
+* Cài đặt thư viện
+
+```
+sudo apt-get install postfix mailutils libsasl2-2 ca-certificates libsasl2-modules -y
+```
+
+* Cấu hình Postfix
+
+```
+vi /etc/postfix/main.cf
+#thêm đoạn sau, comment cấu hình cũ nếu trùng
+relayhost = [smtp.gmail.com]:587
+smtp_sasl_auth_enable = yes
+smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
+smtp_sasl_security_options = noanonymous
+smtp_tls_CAfile = /etc/ssl/certs/thawte_Primary_Root_CA.pem
+smtp_use_tls = yes
+```
+
+* Cấu hình email và mật khẩu
+
+```
+echo [smtp.gmail.com]:587 USERNAME@gmail.com:PASSWORD > /etc/postfix/sasl_passwd
+postmap /etc/postfix/sasl_passwd
+chmod 400 /etc/postfix/sasl_passwd
+```
+
+* Bảo mật mật khẩu
+
+```
+chown root:root /etc/postfix/sasl_passwd /etc/postfix/sasl_passwd.db
+chmod 0600 /etc/postfix/sasl_passwd /etc/postfix/sasl_passwd.db
+```
+
+* Khởi động lại Postfix
+
+```
+systemctl reload postfix
+```
+
+* Test
+
+```
+echo "Test mail from postfix" | mail -s "Test Postfix" you@example.com
+```
+
+* Cấu hình Wazuh
+
+```
+vi /var/ossec/etc/ossec.conf
+# bổ sung đoạn sau
+<global>
+  <email_notification>yes</email_notification>
+  <smtp_server>localhost</smtp_server>
+  <email_from>USERNAME@gmail.com</email_from>
+  <email_to>you@example.com</email_to>
+</global>
+```
+
 # 4. Tích hợp với Slack
 
 * Bật integration
