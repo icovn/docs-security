@@ -192,7 +192,32 @@ sudo systemctl restart nginx
 https://documentation.wazuh.com/current/installation-guide/installing-elastic-stack/connect_wazuh_app.html
 ```
 
-# 
+# 3. Tích hợp với email
+
+# 4. Tích hợp với Slack
+
+* Bật integration
+
+```
+/var/ossec/bin/ossec-control enable integrator
+vi /var/ossec/etc/ossec.conf
+#thêm đoạn sau:
+<integration>
+  <name>slack</name>
+  <hook_url>https://hooks.slack.com/services/...</hook_url>
+</integration>
+#restart
+/var/ossec/bin/ossec-control restart
+```
+
+# 5. Cấu hình active response
+
+* Cấu hình: Tham khảo [https://blog.wazuh.com/blocking-attacks-active-response/](https://blog.wazuh.com/blocking-attacks-active-response/)
+* Xem log
+
+```
+tail -f /var/ossec/logs/active-responses.log
+```
 
 
 
