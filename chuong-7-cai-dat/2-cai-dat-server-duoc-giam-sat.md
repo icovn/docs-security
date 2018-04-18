@@ -16,14 +16,12 @@ sudo apt-get update
 sudo apt-get install wazuh-agent -y
 ```
 
-# 2. Vận hành
+# 2. Đăng ký agent với manager
 
-* Đăng ký agent
+* Đăng ký agent \(ip 210.245.3.67\) với manager có ip 118.70.223.163
 
 ```
 /var/ossec/bin/agent-auth -m 118.70.223.163 -P "MySecret" -A LIVE-STREAM-FPT-210.245.3.67
-/var/ossec/bin/agent-auth -m 118.70.223.163 -P "MySecret" -A LIVE-STREAM-FPT-210.245.3.69
-/var/ossec/bin/agent-auth -m 118.70.223.163 -P "MySecret" -A LIVE-STREAM-FPT-118.70.223.163
 ```
 
 * Fix cấu hình MANAGER\_IP 
