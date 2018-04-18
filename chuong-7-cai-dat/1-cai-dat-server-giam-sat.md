@@ -198,11 +198,9 @@ systemctl reload postfix
 echo "Test mail from postfix" | mail -s "Test Postfix" you@example.com
 ```
 
-* Cấu hình Wazuh
+* Cấu hình OSSEC \(/var/ossec/etc/ossec.conf\)
 
 ```
-vi /var/ossec/etc/ossec.conf
-# bổ sung đoạn sau
 <global>
   <email_notification>yes</email_notification>
   <smtp_server>localhost</smtp_server>
@@ -219,7 +217,7 @@ vi /var/ossec/etc/ossec.conf
 /var/ossec/bin/ossec-control enable integrator
 ```
 
-* Cập nhật cấu hình ossec \(/var/ossec/etc/ossec.conf\)
+* Cập nhật cấu hình OSSEC \(/var/ossec/etc/ossec.conf\)
 
 ```
 <integration>
