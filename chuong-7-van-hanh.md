@@ -113,7 +113,8 @@ https://documentation.wazuh.com/current/installation-guide/installing-elastic-st
 * Cài đặt thư viện
 
 ```
-sudo apt-get install curl apt-transport-https lsb-release
+sudo apt-get install curl apt-transport-https lsb-release -y
+
 sudo curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | apt-key add -
 sudo echo "deb https://packages.wazuh.com/3.x/apt/ stable main" | tee /etc/apt/sources.list.d/wazuh.list
 sudo apt-get update

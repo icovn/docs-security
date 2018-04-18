@@ -10,27 +10,31 @@ OSSEC - Open Source HIDS SECurity
 
 * Cài đặt thư viện \(gcc, make, ...\)
 
-sudo apt-get install build-essential mysql-dev postgresql-dev libmysqlclient-dev -y
+`sudo apt-get install build-essential mysql-dev postgresql-dev libmysqlclient-dev -y`
 
 * Cài đặt ossec-server
 
-./ossec-install.sh
+`./ossec-install.sh`
 
 * Cấu hình
 
-/var/ossec/etc/ossec.conf
+`/var/ossec/etc/ossec.conf`
 
 * Start
 
-/var/ossec/bin/ossec-control start
+`/var/ossec/bin/ossec-control start`
 
 * Stop
 
-/var/ossec/bin/ossec-control stop
+`/var/ossec/bin/ossec-control stop`
 
 * Thêm client & generate key cho client
 
-/var/ossec/bin/manage\_agents
+`/var/ossec/bin/manage_agents`
+
+* Uninstall
+
+`/var/ossec/bin/ossec-control stop && rm -rf /var/ossec && rm /etc/init.d/*ossec* && rm /etc/ossec-init.conf`
 
 * **Cài đặt UI**
 
