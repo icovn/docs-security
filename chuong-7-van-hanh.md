@@ -43,6 +43,14 @@ vi /var/ossec/etc/shared/default/agent.conf
 /var/ossec/bin/verify-agent-conf
 ```
 
+* Kiểm tra version config của agent
+
+```
+md5sum /var/ossec/etc/shared/default/agent.conf
+/var/ossec/bin/agent_control -i 001
+/var/ossec/bin/agent_control -i 002
+```
+
 * Bổ sung custom rule
 
 ```
