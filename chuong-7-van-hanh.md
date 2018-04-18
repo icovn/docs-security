@@ -128,5 +128,19 @@ sudo apt-get install wazuh-agent -y
 
 # 4. Vận hành
 
+* Start OSSEC auth ở server
+
+```
+echo "HuyNQ12Secret" > /var/ossec/etc/authd.pass
+/var/ossec/bin/ossec-authd -P
+```
+
+* Đăng ký agent
+
+```
+/var/ossec/bin/agent-auth -m 118.70.223.163 -P "HuyNQ12Secret"
+```
+
+* 
 
 
