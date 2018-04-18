@@ -28,6 +28,10 @@ sudo apt-get install build-essential mysql-dev postgresql-dev libmysqlclient-dev
 
 /var/ossec/bin/ossec-control stop
 
+* Thêm client & generate key cho client
+
+/var/ossec/bin/manage\_agents
+
 * **Cài đặt UI**
 
   * Cài đặt Apache, MySQL, PHP
