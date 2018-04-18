@@ -14,5 +14,7 @@
   * [OSSEC](chuong-7-van-hanh/ossec.md)
 * [Chương 8 - Giám sát cảnh báo](chuong-8-giam-sat-canh-bao.md)
 * [Tham khảo](tham-khao.md)
+  * [OSSEC](tham-khao/ossec.md)
+  * [Wazuh](tham-khao/wazuh.md)
 * [Tool](tool.md)
 

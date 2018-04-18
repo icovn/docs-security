@@ -320,11 +320,15 @@ f:$sshd_file -> r:^#\s*PermitRootLogin;
 </rootcheck>
 ```
 
-##### 6.3.2. Kiểm tra có chạy đồng bộ thời gian tới server theo quy định hay không 
+##### 6.3.2. Kiểm tra có chạy đồng bộ thời gian tới server theo quy định hay không
 
 ##### 6.3.2. Kiểm tra có cấu hình log đúng quy định
 
 ##### 6.3.3. Kiểm tra nếu dùng PHP thì php.ini có để đúng quy định hay không
+
+### 6.4. Policy monitoring
+
+
 
 ### 6.3. Khác
 
