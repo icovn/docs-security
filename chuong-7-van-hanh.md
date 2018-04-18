@@ -84,9 +84,17 @@ sudo apt-get install build-essential libmysqlclient-dev
 
   systemctl restart apache2
 
-Ghi chú: tham khảo [link](https://glynrob.com/monitoring/ossec/) 
+Ghi chú: tham khảo [link](https://glynrob.com/monitoring/ossec/)
 
 # 3. Cài đặt OSSEC-CLIENT
+
+* Cài đặt thư viện \(gcc, make, ...\)
+
+sudo apt-get install build-essential libmysqlclient-dev -y
+
+* Cài đặt ossec-server
+
+./ossec-install.sh
 
 # 4. Vận hành
 
