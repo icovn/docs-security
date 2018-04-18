@@ -92,6 +92,8 @@ sudo systemctl start kibana.service
 ```
 vi /etc/kibana/kibana.yml
 #cấu hình --> server.host: "0.0.0.0"
+
+sudo systemctl restart kibana.service
 ```
 
 # 4. Vận hành
