@@ -10,7 +10,7 @@ OSSEC - Open Source HIDS SECurity
 
 * Cài đặt thư viện \(gcc, make, ...\)
 
-sudo apt-get install build-essential libmysqlclient-dev -y
+sudo apt-get install build-essential mysql-dev postgresql-dev libmysqlclient-dev -y
 
 * Cài đặt ossec-server
 
