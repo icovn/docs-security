@@ -232,7 +232,7 @@ echo "Test mail from postfix" | mail -s "Test Postfix" you@example.com
 /var/ossec/bin/ossec-control restart
 ```
 
-# 5. Cấu hình active response
+# 5. Cấu hình "Active response"
 
 * Cấu hình: Tham khảo [https://blog.wazuh.com/blocking-attacks-active-response/](https://blog.wazuh.com/blocking-attacks-active-response/)
 * Xem log
@@ -241,60 +241,9 @@ echo "Test mail from postfix" | mail -s "Test Postfix" you@example.com
 tail -f /var/ossec/logs/active-responses.log
 ```
 
-# 6. Vận hành
+# 6. Cấu hình "Root check"
 
-### 6.1. Cấu hình tập trung
-
-* Bổ sung cấu hình cho agent
-
-```
-vi /var/ossec/etc/shared/default/agent.conf
-```
-
-* Kiểm tra config cho agent
-
-```
-/var/ossec/bin/verify-agent-conf
-```
-
-* Kiểm tra version config của agent \(mặc định 10' agent cập nhật cấu hình 1 lần, muốn nhanh hơn thì restart manager\)
-
-```
-md5sum /var/ossec/etc/shared/default/agent.conf
-/var/ossec/bin/agent_control -i 001
-/var/ossec/bin/agent_control -i 002
-```
-
-* Restart agent
-
-```
-/var/ossec/bin/agent_control -R -u 001
-/var/ossec/bin/agent_control -R -u 002
-```
-
-### 6.2. Cập nhật outdate agent
-
-* Lấy danh sách outdate agent
-
-```
-/var/ossec/bin/agent_upgrade -l
-```
-
-* Cập nhật agent với ID là 002
-
-```
-/var/ossec/bin/agent_upgrade -a 002
-```
-
-* Kiểm tra version của agent với lD là 002 
-
-```
-/var/ossec/bin/agent_control -i 002
-```
-
-### 6.3. Root check
-
-##### 6.3.1. Kiểm tra có bật tường lửa
+### 6.1. Kiểm tra có bật tường lửa
 
 * Tạo file audit\_firewall.txt \(/var/ossec/etc/shared/default/audit\_firewall.txt\) với nội dung như sau 
 
@@ -316,15 +265,15 @@ f:$sshd_file -> r:^#\s*PermitRootLogin;
 </rootcheck>
 ```
 
-##### 6.3.2. Kiểm tra có chạy đồng bộ thời gian tới server theo quy định hay không
+### 6.2. Kiểm tra có chạy đồng bộ thời gian tới server theo quy định hay không
 
-##### 6.3.2. Kiểm tra có cấu hình log đúng quy định
+### 6.3. Kiểm tra có cấu hình log đúng quy định
 
-##### 6.3.3. Kiểm tra nếu dùng PHP thì php.ini có để đúng quy định hay không
+### 6.4. Kiểm tra nếu dùng PHP thì php.ini có để đúng quy định hay không
 
-### 6.4. Policy monitoring
+# 7. Cấu hình "Policy monitoring"
 
-### 6.3. Khác
+# 8. Cấu hình Rule 
 
 * Bổ sung custom rule
 
