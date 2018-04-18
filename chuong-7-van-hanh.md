@@ -87,7 +87,14 @@ systemctl enable kibana.service
 systemctl start kibana.service
 ```
 
-* # 4. Vận hành
+* Cho phép truy cập Kibana từ bên ngoài
+
+```
+vi /etc/kibana/kibana.yml
+#cấu hình --> server.host: "0.0.0.0"
+```
+
+# 4. Vận hành
 
 
 
