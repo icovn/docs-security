@@ -31,40 +31,7 @@ sudo apt-get install wazuh-api -y
 /var/ossec/api/scripts/configure_api.sh
 ```
 
-* Bổ sung cấu hình cho agent
-
-```
-vi /var/ossec/etc/shared/default/agent.conf
-```
-
-* Kiểm tra config cho agent
-
-```
-/var/ossec/bin/verify-agent-conf
-```
-
-* Kiểm tra version config của agent \(mặc định 10' agent cập nhật cấu hình 1 lần, muốn nhanh hơn thì restart manager\)
-
-```
-md5sum /var/ossec/etc/shared/default/agent.conf
-/var/ossec/bin/agent_control -i 001
-/var/ossec/bin/agent_control -i 002
-```
-
-* Restart agent
-
-```
-/var/ossec/bin/agent_control -R -u 001
-/var/ossec/bin/agent_control -R -u 002
-```
-
-* Bổ sung custom rule
-
-```
-vi /var/ossec/etc/rules/local_rules.xml
-```
-
-* Start OSSEC auth ở server
+* Start OSSEC auth
 
 ```
 echo "HuyNQ12Secret" > /var/ossec/etc/authd.pass
@@ -276,6 +243,65 @@ vi /var/ossec/etc/ossec.conf
 
 ```
 tail -f /var/ossec/logs/active-responses.log
+```
+
+# 6. Vận hành
+
+###  6.1. Cấu hình tập trung
+
+* Bổ sung cấu hình cho agent
+
+```
+vi /var/ossec/etc/shared/default/agent.conf
+```
+
+* Kiểm tra config cho agent
+
+```
+/var/ossec/bin/verify-agent-conf
+```
+
+* Kiểm tra version config của agent \(mặc định 10' agent cập nhật cấu hình 1 lần, muốn nhanh hơn thì restart manager\)
+
+```
+md5sum /var/ossec/etc/shared/default/agent.conf
+/var/ossec/bin/agent_control -i 001
+/var/ossec/bin/agent_control -i 002
+```
+
+* Restart agent
+
+```
+/var/ossec/bin/agent_control -R -u 001
+/var/ossec/bin/agent_control -R -u 002
+```
+
+### 6.2. Cập nhật outdate agent
+
+* Lấy danh sách outdate agent
+
+```
+/var/ossec/bin/agent_upgrade -l
+```
+
+* Cập nhật agent với ID là 002
+
+```
+/var/ossec/bin/agent_upgrade -a 002
+```
+
+* Kiểm tra version của agent với lD là 002 
+
+```
+/var/ossec/bin/agent_control -i 002
+```
+
+### 6.3. Khác 
+
+* Bổ sung custom rule
+
+```
+vi /var/ossec/etc/rules/local_rules.xml
 ```
 
 
