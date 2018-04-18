@@ -64,6 +64,12 @@ md5sum /var/ossec/etc/shared/default/agent.conf
 vi /var/ossec/etc/rules/local_rules.xml
 ```
 
+* Restart server
+
+```
+/var/ossec/bin/ossec-control restart
+```
+
 Ghi chú: Filebeat không cần thiết khi cài ở chế độ Single vì khi đó Logstash sẽ đọc dữ liệu trực tiếp từ hệ thống mà không cần thông qua trung gian
 
 # 2. Cài đặt Elastic stack
