@@ -1,6 +1,4 @@
-# 
-
-# 3. Cài đặt Wazuh agent
+# 1. Cài đặt Wazuh agent
 
 * Cài đặt thư viện
 
@@ -18,7 +16,7 @@ sudo apt-get update
 sudo apt-get install wazuh-agent -y
 ```
 
-# 4. Vận hành
+# 2. Vận hành
 
 * Start OSSEC auth ở server
 
@@ -53,33 +51,6 @@ echo "wazuh_command.remote_commands=1" >> /var/ossec/etc/local_internal_options.
 
 ```
 /var/ossec/bin/ossec-control restart
-```
-
-# 5. Tích hợp với email
-
-# 6. Tích hợp với Slack
-
-* Bật integration
-
-```
-/var/ossec/bin/ossec-control enable integrator
-vi /var/ossec/etc/ossec.conf
-#thêm đoạn sau:
-<integration>
-  <name>slack</name>
-  <hook_url>https://hooks.slack.com/services/...</hook_url>
-</integration>
-#restart
-/var/ossec/bin/ossec-control restart
-```
-
-# 7. Cấu hình active response
-
-* Cấu hình: Tham khảo [https://blog.wazuh.com/blocking-attacks-active-response/](https://blog.wazuh.com/blocking-attacks-active-response/)
-* Xem log
-
-```
-tail -f /var/ossec/logs/active-responses.log
 ```
 
 
