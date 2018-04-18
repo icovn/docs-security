@@ -100,6 +100,11 @@ sudo apt-get install build-essential libmysqlclient-dev -y
 
 ./ossec-install.sh
 
+* Import key từ server
+
+/var/ossec/bin/manage\_agents
+
+* 
 # 4. Vận hành
 
 
