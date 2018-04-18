@@ -217,13 +217,20 @@ vi /var/ossec/etc/ossec.conf
 
 ```
 /var/ossec/bin/ossec-control enable integrator
-vi /var/ossec/etc/ossec.conf
-#thêm đoạn sau:
+```
+
+* Cập nhật cấu hình ossec \(/var/ossec/etc/ossec.conf\)
+
+```
 <integration>
   <name>slack</name>
   <hook_url>https://hooks.slack.com/services/...</hook_url>
 </integration>
-#restart
+```
+
+* Restart server
+
+```
 /var/ossec/bin/ossec-control restart
 ```
 
