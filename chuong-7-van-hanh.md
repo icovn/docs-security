@@ -37,19 +37,35 @@ sudo apt-get update
 sudo apt-get install oracle-java8-installer -y
 ```
 
-* Cài đặt ossec-server
+* Fix Java version 161
 
-./ossec-install.sh
+```
+cd /var/lib/dpkg/info
+sudo sed -i 's|JAVA_VERSION=8u161|JAVA_VERSION=8u172|' oracle-java8-installer.*
+sudo sed -i 's|PARTNER_URL=http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/|PARTNER_URL=http://download.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/|' oracle-java8-installer.*
+sudo sed -i 's|SHA256SUM_TGZ="6dbc56a0e3310b69e91bb64db63a485bd7b6a8083f08e48047276380a0e2021e"|SHA256SUM_TGZ="28a00b9400b6913563553e09e8024c286b506d8523334c93ddec6c9ec7e9d346"|' oracle-java8-installer.*
+sudo sed -i 's|J_DIR=jdk1.8.0_161|J_DIR=jdk1.8.0_172|' oracle-java8-installer.*
+```
 
-* Import key từ server
+* Cài đặt Elastic repository
 
-/var/ossec/bin/manage\_agents
+```
+sudo apt-get install curl apt-transport-https
+sudo curl -s https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
+sudo echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | tee /etc/apt/sources.list.d/elastic-6.x.list
+sudo apt-get update
+```
 
-* Cho phép thêm command từ server
+* Cài đặt Elastic Search
 
-vi /var/ossec/etc/internal\_options.conf
+```
+sudo apt-get install elasticsearch=6.2.3 -y
+systemctl daemon-reload
+systemctl enable elasticsearch.service
+systemctl start elasticsearch.service
+```
 
-\#logcollector.remote\_commands đặt là 1
+
 
 * Start agent
 
