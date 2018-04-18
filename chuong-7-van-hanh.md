@@ -222,7 +222,12 @@ vi /var/ossec/etc/ossec.conf
 
 # 7. Cấu hình active response
 
-Tham khảo https://blog.wazuh.com/blocking-attacks-active-response/
+* Cấu hình: Tham khảo [https://blog.wazuh.com/blocking-attacks-active-response/](https://blog.wazuh.com/blocking-attacks-active-response/)
+* Xem log
+
+```
+tail -f /var/ossec/logs/active-responses.log
+```
 
 
 
