@@ -106,15 +106,6 @@ sudo systemctl enable kibana.service
 sudo systemctl start kibana.service
 ```
 
-* Cho phép truy cập Kibana từ bên ngoài
-
-```
-vi /etc/kibana/kibana.yml
-#cấu hình --> server.host: "0.0.0.0"
-
-sudo systemctl restart kibana.service
-```
-
 * Cài đặt nginx
 
 ```
