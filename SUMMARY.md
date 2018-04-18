@@ -10,7 +10,11 @@
 * Chương 7 - Cài đặt
   * [1 - Server giám sát](1-server-giam-sat.md)
   * [2 - Server được giám sát](2-server-duoc-giam-sat.md)
-* Chương 8 - Vận hành
-  * 1 - Server giám sát
-  * 2 - Server được giám sát
+* [Chương 8 - Vận hành](chuong-8-van-hanh.md)
+  * [1 - Vận hành server giám sát](chuong-8-van-hanh/1-van-hanh-server-giam-sat.md)
+  * [2 - Vận hành server được giám sát](chuong-8-van-hanh/2-van-hanh-server-duoc-giam-sat.md)
+* [Tham khảo](tham-khao.md)
+  * [Tool](tham-khao/tool.md)
+  * [OSSEC](tham-khao/ossec.md)
+  * [Wazuh](tham-khao/wazuh.md)
 
