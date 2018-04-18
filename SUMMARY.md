@@ -8,10 +8,12 @@
 * [Chương 5 - Network](chuong-5-network.md)
 * [Chương 6 - Trace](chuong-6-trace.md)
 * Chương 7 - Cài đặt
+  * [1 - Server giám sát](1-server-giam-sat.md)
+  * 2 - Server được giám sát
 * Chương 8 - Vận hành
+  * 1 - Server giám sát
+  * 2 - Server được giám sát
 * [Chương 7 - Vận hành](chuong-7-van-hanh.md)
   * [1 - Server giám sát](chuong-7-van-hanh/1-server-giam-sat.md)
   * [2 - Server được giám sát ](chuong-7-van-hanh/2-server-duoc-giam-sat.md)
-* [Chương 8 - Giám sát cảnh báo](chuong-8-giam-sat-canh-bao.md)
-* Chương 8 - Vận hành
 
