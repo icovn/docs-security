@@ -43,7 +43,7 @@ vi /var/ossec/etc/shared/default/agent.conf
 /var/ossec/bin/verify-agent-conf
 ```
 
-* Kiểm tra version config của agent
+* Kiểm tra version config của agent \(mặc định 10' agent cập nhật cấu hình 1 lần, muốn nhanh hơn thì restart manager\)
 
 ```
 md5sum /var/ossec/etc/shared/default/agent.conf
