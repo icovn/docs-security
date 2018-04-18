@@ -51,6 +51,13 @@ md5sum /var/ossec/etc/shared/default/agent.conf
 /var/ossec/bin/agent_control -i 002
 ```
 
+* Restart agent
+
+```
+/var/ossec/bin/agent_control -R -u 001
+/var/ossec/bin/agent_control -R -u 002
+```
+
 * Bổ sung custom rule
 
 ```
