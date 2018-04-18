@@ -202,12 +202,9 @@ echo "wazuh_command.remote_commands=1" >> /var/ossec/etc/local_internal_options.
 /var/ossec/bin/ossec-control restart
 ```
 
-* 
 # 5. Tích hợp với email
 
 # 6. Tích hợp với Slack
-
-
 
 
 
