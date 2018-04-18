@@ -79,7 +79,7 @@ sudo systemctl start logstash.service
 * Cài đặt **Kibana**
 
 ```
-sudo apt-get install kibana=6.2.3
+sudo apt-get install kibana=6.2.3 -y
 sudo export NODE_OPTIONS="--max-old-space-size=3072"
 sudo /usr/share/kibana/bin/kibana-plugin install https://packages.wazuh.com/wazuhapp/wazuhapp-3.2.1_6.2.3.zip
 systemctl daemon-reload
