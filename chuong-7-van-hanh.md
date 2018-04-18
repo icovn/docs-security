@@ -210,9 +210,15 @@ echo "wazuh_command.remote_commands=1" >> /var/ossec/etc/local_internal_options.
 
 ```
 /var/ossec/bin/ossec-control enable integrator
+vi /var/ossec/etc/ossec.conf
+#thêm đoạn sau:
+<integration>
+  <name>slack</name>
+  <hook_url>https://hooks.slack.com/services/...</hook_url>
+</integration>
+#restart
 /var/ossec/bin/ossec-control restart
 ```
 
-* 
 
 
