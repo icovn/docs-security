@@ -1,12 +1,24 @@
-# 1. Giới thiệu về OSSEC
+# 1. Giới thiệu về Wazuh
 
-OSSEC - Open Source HIDS SECurity
+Wazuh is a security detection, visibility, and compliance open source project. It was born as a fork of [OSSEC HIDS](http://ossec.github.io/), and later was integrated with [Elastic Stack](https://www.elastic.co/) and [OpenSCAP](https://www.open-scap.org/), evolving into a more comprehensive solution![](/assets/wazuh-component.png)
 
-* _**Watching**_: OSSEC watches it all, actively monitoring all aspects of Unix system activity with file integrity monitoring, log monitoring, rootcheck, and process monitoring. With OSSEC you won't be in the dark about what is happening to your valuable computer system assets.
-* _**Alerting**_: When attacks happen OSSEC lets you know through alert logs and email alerts sent to you and your IT staff so you can take quick actions. OSSEC also exports alerts to any SIEM system via syslog so you can get real-time analytics and insights into your system security events.
-* _**Everywhere**_: Got a variety of operating systems to support and protect? OSSEC has you covered with comprehensive host based intrusion detection across multiple platforms including Linux,Solaris, AIX, HP-UX, BSD, Windows, Mac and VMware ESX.
+* **OSSEC HIDS** is a Host-based Intrusion Detection System \(HIDS\) used for security detection, visibility, and compliance monitoring. It’s based on a multi-platform agent that forwards system data \(e.g log messages, file hashes, and detected anomalies\) to a central manager, where it is further analyzed and processed, resulting in security alerts. Agents convey event data to the central manager for analysis via a secure and authenticated channel.
+* **OpenSCAP **is an [OVAL](https://oval.mitre.org/)\(Open Vulnerability Assessment Language\) and XCCDF \(Extensible Configuration Checklist Description Format\) interpreter used to check system configurations and to detect vulnerable applications.
+* **Elastic Stack** is a software suite \(Filebeat, Logstash, Elasticsearch, Kibana\) used to collect, parse, index, store, search, and present log data. It provides a web front-end that gives a high-level dashboard view of events that allows for advanced analytics and data mining deep into your store of event data.
 
-# 2. Cài đặt OSSEC-SERVER
+# 2. Kiến trúc
+
+* Single server
+
+![](/assets/single.png)
+
+* Distributed
+
+![](/assets/distributed.png)
+
+* Communications and data flow![](/assets/communication.png)
+
+# 2. Cài đặt Wazuh-SERVER
 
 * Cài đặt thư viện \(gcc, make, ...\)
 
@@ -90,7 +102,7 @@ sudo apt-get install build-essential mysql-dev postgresql-dev libmysqlclient-dev
 
 Ghi chú: tham khảo [link](https://glynrob.com/monitoring/ossec/)
 
-# 3. Cài đặt OSSEC-CLIENT
+# 3. Cài đặt Wazuh-Agent
 
 * Cài đặt thư viện \(gcc, make, ...\)
 
