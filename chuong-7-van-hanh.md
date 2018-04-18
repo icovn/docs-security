@@ -56,22 +56,17 @@ sudo echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | tee 
 sudo apt-get update
 ```
 
-* Cài đặt Elastic Search
+* Cài đặt **Elastic Search**
 
 ```
 sudo apt-get install elasticsearch=6.2.3 -y
 sudo systemctl daemon-reload
 sudo systemctl enable elasticsearch.service
 sudo systemctl start elasticsearch.service
-```
-
-* Load the Wazuh template for Elasticsearch
-
-```
 sudo curl https://raw.githubusercontent.com/wazuh/wazuh/3.2/extensions/elasticsearch/wazuh-elastic6-template-alerts.json | curl -XPUT 'http://localhost:9200/_template/wazuh' -H 'Content-Type: application/json' -d @-
 ```
 
-* Cài đặt Logstash
+* Cài đặt **Logstash**
 
 ```
 sudo apt-get install logstash=1:6.2.3-1
@@ -81,14 +76,15 @@ sudo systemctl enable logstash.service
 sudo systemctl start logstash.service
 ```
 
-* Load configuration
+* Cài đặt **Kibana**
 
 ```
-
+sudo apt-get install kibana=6.2.3
+sudo export NODE_OPTIONS="--max-old-space-size=3072"
+sudo /usr/share/kibana/bin/kibana-plugin install https://packages.wazuh.com/wazuhapp/wazuhapp-3.2.1_6.2.3.zip
 ```
 
-* 
-# 4. Vận hành
+* # 4. Vận hành
 
 
 
