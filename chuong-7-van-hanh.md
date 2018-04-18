@@ -142,11 +142,17 @@ echo "HuyNQ12Secret" > /var/ossec/etc/authd.pass
 /var/ossec/bin/agent-auth -m 118.70.223.163 -P "HuyNQ12Secret" -A LIVE-STREAM-FPT-210.245.3.69
 ```
 
-* Fix cấu hình ossec ở client
+* Fix cấu hình ossec ở agent
 
 ```
 vi /var/ossec/etc/ossec.conf
 #thay MANAGER_IP bằng IP của server
+```
+
+* Cho phép chạy remote command ở agent
+
+```
+vi /var/ossec/etc/local_internal_options.conf
 ```
 
 * Restart agent
