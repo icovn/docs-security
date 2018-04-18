@@ -152,8 +152,7 @@ vi /var/ossec/etc/ossec.conf
 * Cho phép chạy remote command ở agent
 
 ```
-vi /var/ossec/etc/local_internal_options.conf
-#thêm --> logcollector.remote_commands=1
+echo "logcollector.remote_commands=1" >> /var/ossec/etc/local_internal_options.conf
 ```
 
 * Restart agent
