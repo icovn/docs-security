@@ -206,5 +206,12 @@ echo "wazuh_command.remote_commands=1" >> /var/ossec/etc/local_internal_options.
 
 # 6. Tích hợp với Slack
 
+* Bật integration
+
+```
+/var/ossec/bin/ossec-control enable integrator
+```
+
+* 
 
 
