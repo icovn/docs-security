@@ -142,6 +142,12 @@ echo "HuyNQ12Secret" > /var/ossec/etc/authd.pass
 /var/ossec/bin/agent-auth -m 118.70.223.163 -P "HuyNQ12Secret" -A LIVE-STREAM-FPT-210.245.3.69
 ```
 
+* Restart agent
+
+```
+/var/ossec/bin/ossec-control restart
+```
+
 * 
 
 

@@ -8,8 +8,8 @@
   * Agent 
     * [https://documentation.wazuh.com/current/installation-guide/installing-wazuh-agent/index.html](https://documentation.wazuh.com/current/installation-guide/installing-wazuh-agent/index.html)
     * [https://documentation.wazuh.com/current/installation-guide/installing-wazuh-agent/wazuh\_agent\_deb.html](https://documentation.wazuh.com/current/installation-guide/installing-wazuh-agent/wazuh_agent_deb.html)
-  * Open port: https://documentation.wazuh.com/current/docker/wazuh-container.html
-  * 
+  * Open port: [https://documentation.wazuh.com/current/docker/wazuh-container.html](https://documentation.wazuh.com/current/docker/wazuh-container.html)
+  * Agent life cycle https://documentation.wazuh.com/current/user-manual/agents/index.html
 * Cài đặt OSSEC
   * Tất cả các module [link](https://glynrob.com/monitoring/ossec/)
 * [Tài liệu](https://ossec.github.io/docs/) OSSEC
