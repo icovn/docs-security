@@ -141,6 +141,44 @@ vi /etc/kibana/kibana.yml
 sudo systemctl restart kibana.service
 ```
 
+* Cài đặt nginx
+
+```
+sudo apt-get install nginx -y
+vi /etc/nginx/sites-enabled/default
+#cấu hình nginx cho Kibana và Wazuh API 
+server {
+    listen 80;
+    server_name ossec.ivynative.com;
+
+    root /var/www/html;
+
+    # Add index.php to the list if you are using PHP
+    index index.html index.htm index.nginx-debian.html;
+
+    server_name _;
+
+    location / {
+        auth_basic "Restricted";
+        auth_basic_user_file /etc/nginx/conf.d/nginx.htpasswd;
+        proxy_pass http://127.0.0.1:5601;
+    }
+    location /wazuh_api/ {
+        proxy_pass http://127.0.0.1:55000/;
+    }
+}
+#
+
+# tạo account 
+sudo sh -c "echo -n 'icovn:' >> /etc/nginx/conf.d/nginx.htpasswd"
+
+# đặt password
+sudo sh -c "openssl passwd -apr1 >> /etc/nginx/conf.d/nginx.htpasswd"
+
+# restart nginx
+sudo systemctl restart nginx
+```
+
 * Kết nối Wazuh App với API
 
 ```
