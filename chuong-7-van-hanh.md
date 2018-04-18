@@ -31,6 +31,18 @@ sudo apt-get install wazuh-api -y
 /var/ossec/api/scripts/configure_api.sh
 ```
 
+* Bổ sung cấu hình cho agent
+
+```
+vi /var/ossec/etc/shared/default/agent.conf
+```
+
+* Bổ sung custom rule
+
+```
+vi /var/ossec/etc/rules/local_rules.xml
+```
+
 Ghi chú: Filebeat không cần thiết khi cài ở chế độ Single vì khi đó Logstash sẽ đọc dữ liệu trực tiếp từ hệ thống mà không cần thông qua trung gian
 
 # 2. Cài đặt Elastic stack
