@@ -104,6 +104,12 @@ sudo apt-get install build-essential libmysqlclient-dev -y
 
 /var/ossec/bin/manage\_agents
 
+* Cho phép thêm command từ server
+
+vi /var/ossec/etc/internal\_options.conf
+
+\#logcollector.remote\_commands đặt là 1
+
 * 
 # 4. Vận hành
 
