@@ -26,7 +26,7 @@ sudo apt-get install wazuh-agent -y
 /var/ossec/bin/agent-auth -m 118.70.223.163 -P "MySecret" -A LIVE-STREAM-FPT-118.70.223.163
 ```
 
-* Fix cấu hình ossec ở agent
+* Fix cấu hình MANAGER\_IP 
 
 ```
 vi /var/ossec/etc/ossec.conf
