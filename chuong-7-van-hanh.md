@@ -20,17 +20,22 @@ sudo apt-get install wazuh-manager -y
 
 ```
 sudo curl -sL https://deb.nodesource.com/setup_6.x 
+sudo apt-get update
 sudo apt-get install nodejs -y
 sudo apt-get install wazuh-api -y
 ```
 
 Ghi chú: Filebeat không cần thiết khi cài ở chế độ Single vì khi đó Logstash sẽ đọc dữ liệu trực tiếp từ hệ thống mà không cần thông qua trung gian
 
-# 3. Cài đặt Wazuh-Agent
+# 2. Cài đặt Elastic stack
 
-* Cài đặt thư viện \(gcc, make, ...\)
+* Cài đặt Java
 
-sudo apt-get install build-essential libmysqlclient-dev -y
+```
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer -y
+```
 
 * Cài đặt ossec-server
 
