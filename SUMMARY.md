@@ -13,6 +13,9 @@
 * [Chương 8 - Vận hành](chuong-8-van-hanh.md)
   * [1 - Vận hành server giám sát](chuong-8-van-hanh/1-van-hanh-server-giam-sat.md)
   * [2 - Vận hành server được giám sát](chuong-8-van-hanh/2-van-hanh-server-duoc-giam-sat.md)
+  * [I. Vận hành server giám sát](chuong-8-van-hanh/i-van-hanh-server-giam-sat.md)
+    * [1 - Cấu hình tập trung](chuong-8-van-hanh/i-van-hanh-server-giam-sat/1-cau-hinh-tap-trung.md)
+  * II. Vận hành server được giám sát
 * [Tham khảo](tham-khao.md)
   * [Tool](tham-khao/tool.md)
   * [OSSEC](tham-khao/ossec.md)
