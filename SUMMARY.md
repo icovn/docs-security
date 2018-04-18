@@ -9,7 +9,7 @@
 * [Chương 6 - Trace](chuong-6-trace.md)
 * Chương 7 - Cài đặt
   * [1 - Server giám sát](1-server-giam-sat.md)
-  * 2 - Server được giám sát
+  * [2 - Server được giám sát](2-server-duoc-giam-sat.md)
 * Chương 8 - Vận hành
   * 1 - Server giám sát
   * 2 - Server được giám sát
