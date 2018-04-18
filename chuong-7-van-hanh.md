@@ -102,6 +102,29 @@ vi /etc/kibana/kibana.yml
 sudo systemctl restart kibana.service
 ```
 
+* Kết nối Wazuh App với API
+
+```
+https://documentation.wazuh.com/current/installation-guide/installing-elastic-stack/connect_wazuh_app.html
+```
+
+# 3. Cài đặt Wazuh agent
+
+* Cài đặt thư viện
+
+```
+sudo apt-get install curl apt-transport-https lsb-release
+sudo curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | apt-key add -
+sudo echo "deb https://packages.wazuh.com/3.x/apt/ stable main" | tee /etc/apt/sources.list.d/wazuh.list
+sudo apt-get update
+```
+
+* Cài đặt Wazuh agent
+
+```
+sudo apt-get install wazuh-agent
+```
+
 # 4. Vận hành
 
 
