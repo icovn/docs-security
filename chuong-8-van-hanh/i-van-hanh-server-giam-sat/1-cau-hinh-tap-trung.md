@@ -38,15 +38,7 @@ md5sum /var/ossec/etc/shared/default/agent.conf
 /var/ossec/bin/agent_control -R -u 002
 ```
 
-### 3. Thiết lập tường lửa
 
-* Cài đặt ufw
-
-```
-
-```
-
-* Thiết lập ufw
 
 ```
 
