@@ -22,7 +22,6 @@
     * [11 - Cài đặt Prometheus Stack](chuong-7-cai-dat/11-cai-dat-prometheus-stack.md)
     * [12 - Các cài đặt và cấu hình khác](chuong-7-cai-dat/12-cac-cai-dat-va-cau-hinh-khac.md)
   * [II. Cài đặt server được giám sát](chuong-7-cai-dat/ii-cai-dat-server-duoc-giam-sat.md)
-  * 10 - Cấu hình "Vulnerability detection"
 * [Chương 8 - Vận hành](chuong-8-van-hanh.md)
   * [I. Vận hành server giám sát](chuong-8-van-hanh/i-van-hanh-server-giam-sat.md)
     * [1 - Cấu hình tập trung](chuong-8-van-hanh/i-van-hanh-server-giam-sat/1-cau-hinh-tap-trung.md)
