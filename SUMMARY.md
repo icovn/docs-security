@@ -28,7 +28,7 @@
     * [2 - Cập nhật outdate agent](chuong-8-van-hanh/i-van-hanh-server-giam-sat/2-cap-nhat-outdate-agent.md)
     * [3 - Root check](chuong-8-van-hanh/i-van-hanh-server-giam-sat/3-root-check.md)
     * [4 - Policy monitoring ](chuong-8-van-hanh/i-van-hanh-server-giam-sat/4-policy-monitoring.md)
-    * 5 - Debug OSSEC
+    * [5 - Debug OSSEC](chuong-8-van-hanh/i-van-hanh-server-giam-sat/5-debug-ossec.md)
   * [II. Vận hành server được giám sát](chuong-8-van-hanh/ii-van-hanh-server-duoc-giam-sat.md)
 * [Tham khảo](tham-khao.md)
   * [Tool](tham-khao/tool.md)
