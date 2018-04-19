@@ -7,5 +7,26 @@
 </localfile>
 ```
 
+* Bổ sung rule để alert audit command \(/var/ossec/etc/rules/local\_rules.xml\)
+
+```
+  <rule id="100102" level="3" >
+    <if_sid>80700</if_sid>
+    <!-- <list field="audit.key" lookup="match_key_value" check_value="command">etc/lists/audit-keys</list> -->
+    <list field="audit.key" lookup="match_key">etc/lists/audit-keys</list>
+    <description>Audit: Command: $(audit.exe)</description>
+    <group>audit_command,</group>
+  </rule>
+```
+
+* Khởi động lại server và agent
+
+```
+/var/ossec/bin/ossec-control restart
+/var/ossec/bin/agent_control -R -a
+```
+
+
+
 
 
