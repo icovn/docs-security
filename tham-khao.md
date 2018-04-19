@@ -1,4 +1,6 @@
-* Log level [https://en.wikipedia.org/wiki/Syslog](https://en.wikipedia.org/wiki/Syslog)
+* Log level
+  * OSSEC http://ossec-docs.readthedocs.io/en/latest/manual/rules-decoders/rule-levels.html
+  * Syslog [https://en.wikipedia.org/wiki/Syslog](https://en.wikipedia.org/wiki/Syslog)
 * Cài đặt Wazuh:
   * Server 
     * [https://documentation.wazuh.com/current/installation-guide/installing-wazuh-server/index.html](https://documentation.wazuh.com/current/installation-guide/installing-wazuh-server/index.html)
@@ -15,8 +17,8 @@
 * Cài đặt OSSEC
   * Tất cả các module [link](https://glynrob.com/monitoring/ossec/)
 * [Tài liệu](https://ossec.github.io/docs/) OSSEC
-  * OSSEC PCI DSS GUIDE https://wazuh.com/resources/OSSEC\_PCI\_DSS\_Guide.pdf
-  * OSSEC RULESET https://wazuh.com/resources/OSSEC\_Ruleset.pdf
+  * OSSEC PCI DSS GUIDE [https://wazuh.com/resources/OSSEC\_PCI\_DSS\_Guide.pdf](https://wazuh.com/resources/OSSEC_PCI_DSS_Guide.pdf)
+  * OSSEC RULESET [https://wazuh.com/resources/OSSEC\_Ruleset.pdf](https://wazuh.com/resources/OSSEC_Ruleset.pdf)
   * 
 
 
