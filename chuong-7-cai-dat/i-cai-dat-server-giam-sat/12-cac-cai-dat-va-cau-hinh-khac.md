@@ -1,6 +1,8 @@
 ### 1. Cấu hình "Active response"
 
-* Cấu hình: Tham khảo [https://blog.wazuh.com/blocking-attacks-active-response/](https://blog.wazuh.com/blocking-attacks-active-response/)
+* Tham khảo 
+  * [https://blog.wazuh.com/blocking-attacks-active-response/](https://blog.wazuh.com/blocking-attacks-active-response/)
+  * https://ossec-docs.readthedocs.io/en/latest/manual/ar/ar-custom.html
 * Xem log
 
 ```
