@@ -229,6 +229,12 @@ echo "Test mail from postfix" | mail -s "Test Postfix" you@example.com
 </global>
 ```
 
+* Restart server
+
+```
+/var/ossec/bin/ossec-control restart
+```
+
 # 5. Tích hợp Wazuh với Slack
 
 * Bật integration
