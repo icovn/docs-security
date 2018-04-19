@@ -34,6 +34,12 @@ sudo apt-get update
 sudo apt-get install libopenscap8 xsltproc -y
 ```
 
+* Cài đặt auditd
+
+```
+sudo apt-get install auditd -y
+```
+
 * Cài đặt Wazuh agent
 
 ```
