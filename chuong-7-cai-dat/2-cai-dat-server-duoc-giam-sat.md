@@ -28,6 +28,12 @@ sudo echo "deb https://packages.wazuh.com/3.x/apt/ stable main" | tee /etc/apt/s
 sudo apt-get update
 ```
 
+* Cài đặt OpenSCAP
+
+```
+sudo apt-get install libopenscap8 xsltproc -y
+```
+
 * Cài đặt Wazuh agent
 
 ```
