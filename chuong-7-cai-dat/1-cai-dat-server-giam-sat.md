@@ -235,6 +235,27 @@ echo "Test mail from postfix" | mail -s "Test Postfix" you@example.com
 /var/ossec/bin/ossec-control restart
 ```
 
+# 5. Cấu hình báo cáo ngày
+
+* Cập nhật cấu hình OSSEC \(/var/ossec/etc/ossec.conf\)
+
+```
+<ossec_config>
+  <reports>
+    <category>syscheck</category>
+    <level>10</level>
+    <title>Daily report: Alerts with level higher than 10</title>
+    <email_to>example@test.com</email_to>
+  </reports>
+</ossec_config>
+```
+
+* Restart server
+
+```
+/var/ossec/bin/ossec-control restart
+```
+
 # 5. Tích hợp Wazuh với Slack
 
 * Bật integration
