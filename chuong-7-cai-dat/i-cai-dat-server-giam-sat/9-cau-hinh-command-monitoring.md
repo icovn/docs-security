@@ -15,8 +15,8 @@
 ```
 <rule id="100103" level="3">
   <match>^Status: inactive</match>
-  <description>Audit: Command: $(audit.exe)</description>
-  <group>audit_command,</group>
+  <description>UFW inactive</description>
+  <group>firewall,</group>
 </rule>
 ```
 
