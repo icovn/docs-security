@@ -21,7 +21,7 @@
 tailf /var/ossec/logs/archives/archives.json
 ```
 
-* Test log
+* Tách full\_log dán vào test log
 
 ```
 /var/ossec/bin/ossec-logtest -v
