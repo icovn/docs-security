@@ -1,23 +1,13 @@
 ### 1. Kiểm tra có bật tường lửa
 
-* Tạo file audit\_firewall.txt \(/var/ossec/etc/shared/default/audit\_firewall.txt\) với nội dung như sau 
+* Bổ sung cấu hình agent.conf \(/var/ossec/etc/shared/default/agent.conf\)
 
 ```
-# PermitRootLogin not allowed
-# PermitRootLogin indicates if the root user can log in by ssh.
-$sshd_file=/etc/ssh/sshd_config;
-
-[SSH Configuration - 1: Root can log in] [any] [1]
-f:$sshd_file -> !r:^# && r:PermitRootLogin\.+yes;
-f:$sshd_file -> r:^#\s*PermitRootLogin;
-```
-
-* Cập nhật agent.conf \(/var/ossec/etc/shared/default/agent.conf\)
-
-```
-<rootcheck>
-   <system_audit>/var/ossec/etc/shared/default/audit_firewall.txt</system_audit>
-</rootcheck>
+<localfile>
+     <log_format>full_command</log_format>
+     <command>ufw status</command>
+     <frequency>120</frequency>
+</localfile>
 ```
 
 ### 2. Kiểm tra có chạy đồng bộ thời gian tới server theo quy định hay không
