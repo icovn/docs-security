@@ -26,7 +26,20 @@
 /var/ossec/bin/agent_control -R -a
 ```
 
+* Bổ sung rule cho auditd
 
+```
+# theo dõi truy cập đến folder /u01
+mkdir /u01
+auditctl -w /u01 -p w -k audit-wazuh-w
+auditctl -w /u01 -p a -k audit-wazuh-a
+auditctl -w /u01 -p r -k audit-wazuh-r
+auditctl -w /u01 -p x -k audit-wazuh-x
+
+# theo dõi lệnh từ user root và lệnh sudo
+auditctl -a exit,always -F euid=0 -F arch=b64 -S execve -k audit-wazuh-c
+auditctl -a exit,always -F euid=0 -F arch=b32 -S execve -k audit-wazuh-c
+```
 
 
 
