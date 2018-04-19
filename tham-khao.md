@@ -1,5 +1,5 @@
 * Log level
-  * OSSEC http://ossec-docs.readthedocs.io/en/latest/manual/rules-decoders/rule-levels.html
+  * OSSEC [http://ossec-docs.readthedocs.io/en/latest/manual/rules-decoders/rule-levels.html](http://ossec-docs.readthedocs.io/en/latest/manual/rules-decoders/rule-levels.html)
   * Syslog [https://en.wikipedia.org/wiki/Syslog](https://en.wikipedia.org/wiki/Syslog)
 * Cài đặt Wazuh:
   * Server 
