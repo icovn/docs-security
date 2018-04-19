@@ -273,8 +273,36 @@ f:$sshd_file -> r:^#\s*PermitRootLogin;
 
 # 7. Cấu hình "Policy monitoring"
 
-# 8. Cấu hình Rule 
+### 7.1. Đánh giá sự tuân thủ PCI-DSS trên RHEL7
 
+* Cập nhật cấu hình cho agent \(/var/ossec/etc/shared/default/agent.conf\)
+
+```
+<agent_config profile="ubuntu">
+
+  <wodle name="open-scap">
+    <disabled>no</disabled>
+    <timeout>1800</timeout>
+    <interval>1d</interval>
+    <scan-on-start>yes</scan-on-start>
+    
+    <content type="xccdf" path="ssg-ubuntu-1604-ds.xml">
+      <profile>xccdf_org.ssgproject.content_profile_pci-dss</profile>
+      <profile>xccdf_org.ssgproject.content_profile_common</profile>
+    </content>
+  </wodle>
+
+</agent_config>
+```
+
+* Khởi động lại manager và agent
+
+```
+/var/ossec/bin/ossec-control restart
+/var/ossec/bin/agent_control -R -a
+```
+
+* # 8. Cấu hình Rule
 * Bổ sung custom rule
 
 ```
