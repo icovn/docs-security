@@ -13,7 +13,7 @@ sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow 22
 sudo ufw allow 80
-sudo ufw allow 1322
+sudo ufw allow 1524
 ```
 
 # 2. Cài đặt Wazuh agent
