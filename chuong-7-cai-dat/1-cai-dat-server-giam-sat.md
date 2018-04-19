@@ -1,4 +1,24 @@
-# 1. Cài đặt Wazuh server
+# 1. Cài đặt tường lửa
+
+* Cài đặt ufw
+
+```
+sudo apt-get install ufw -y
+```
+
+* Cấu hình ufw
+
+```
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow 22
+sudo ufw allow 80
+sudo ufw allow 1322
+sudo ufw allow 1514/udp
+sudo ufw allow 1515/tcp
+```
+
+# 2. Cài đặt Wazuh server
 
 * Cài đặt thư viện
 
@@ -46,7 +66,7 @@ echo "HuyNQ12Secret" > /var/ossec/etc/authd.pass
 
 Ghi chú: Filebeat không cần thiết khi cài ở chế độ Single vì khi đó Logstash sẽ đọc dữ liệu trực tiếp từ hệ thống mà không cần thông qua trung gian
 
-# 2. Cài đặt Elastic stack
+# 3. Cài đặt Elastic stack
 
 * Cài đặt Java
 
@@ -150,7 +170,7 @@ sudo systemctl restart nginx
 https://documentation.wazuh.com/current/installation-guide/installing-elastic-stack/connect_wazuh_app.html
 ```
 
-# 3. Tích hợp Wazuh với email
+# 4. Tích hợp Wazuh với email
 
 * Cài đặt thư viện
 
@@ -209,7 +229,7 @@ echo "Test mail from postfix" | mail -s "Test Postfix" you@example.com
 </global>
 ```
 
-# 4. Tích hợp Wazuh với Slack
+# 5. Tích hợp Wazuh với Slack
 
 * Bật integration
 
@@ -232,7 +252,7 @@ echo "Test mail from postfix" | mail -s "Test Postfix" you@example.com
 /var/ossec/bin/ossec-control restart
 ```
 
-# 5. Cấu hình "Active response"
+# 6. Cấu hình "Active response"
 
 * Cấu hình: Tham khảo [https://blog.wazuh.com/blocking-attacks-active-response/](https://blog.wazuh.com/blocking-attacks-active-response/)
 * Xem log
@@ -241,9 +261,9 @@ echo "Test mail from postfix" | mail -s "Test Postfix" you@example.com
 tail -f /var/ossec/logs/active-responses.log
 ```
 
-# 6. Cấu hình "Root check"
+# 7. Cấu hình "Root check"
 
-### 6.1. Kiểm tra có bật tường lửa
+### 7.1. Kiểm tra có bật tường lửa
 
 * Tạo file audit\_firewall.txt \(/var/ossec/etc/shared/default/audit\_firewall.txt\) với nội dung như sau 
 
@@ -265,15 +285,15 @@ f:$sshd_file -> r:^#\s*PermitRootLogin;
 </rootcheck>
 ```
 
-### 6.2. Kiểm tra có chạy đồng bộ thời gian tới server theo quy định hay không
+### 7.2. Kiểm tra có chạy đồng bộ thời gian tới server theo quy định hay không
 
-### 6.3. Kiểm tra có cấu hình log đúng quy định
+### 7.3. Kiểm tra có cấu hình log đúng quy định
 
-### 6.4. Kiểm tra nếu dùng PHP thì php.ini có để đúng quy định hay không
+### 7.4. Kiểm tra nếu dùng PHP thì php.ini có để đúng quy định hay không
 
-# 7. Cấu hình "Policy monitoring"
+# 8. Cấu hình "Policy monitoring"
 
-### 7.1. Đánh giá sự tuân thủ PCI-DSS của Ubuntu
+### 8.1. Đánh giá sự tuân thủ PCI-DSS của Ubuntu
 
 * Cập nhật cấu hình cho agent \(/var/ossec/etc/shared/default/agent.conf\)
 
@@ -316,7 +336,7 @@ Tham khảo:
 
 * [https://github.com/OpenSCAP/scap-security-guide](https://github.com/OpenSCAP/scap-security-guide)
 
-### 7.2. Kiểm tra lỗ hổng bảo mật của Ubuntu
+### 8.2. Kiểm tra lỗ hổng bảo mật của Ubuntu
 
 ### Cập nhật cấu hình cho agent \(/var/ossec/etc/shared/default/agent.conf\)
 
@@ -343,7 +363,7 @@ Tham khảo:
 /var/ossec/bin/agent_control -R -a
 ```
 
-### 7.3. Đánh giá sự tuân thủ PCI-DSS & Kiểm tra lỗ hổng bảo mật của RHEL7
+### 8.3. Đánh giá sự tuân thủ PCI-DSS & Kiểm tra lỗ hổng bảo mật của RHEL7
 
 Tham khảo:
 
@@ -351,7 +371,7 @@ Tham khảo:
 
 Ghi chú: policy được lưu ở folder /var/ossec/wodles/oscap/content trên mỗi agent
 
-# 8. Cấu hình Rule
+# 9. Cấu hình Rule
 
 * Bổ sung custom rule
 
@@ -359,25 +379,7 @@ Ghi chú: policy được lưu ở folder /var/ossec/wodles/oscap/content trên 
 vi /var/ossec/etc/rules/local_rules.xml
 ```
 
-# 9. Cài đặt tường lửa
-
-* Cài đặt ufw
-
-```
-sudo apt-get install ufw -y
-```
-
-* Cấu hình ufw
-
-```
-sudo ufw default deny incoming
-sudo ufw default allow outgoing
-sudo ufw allow 22
-sudo ufw allow 80
-sudo ufw allow 1322
-sudo ufw allow 1514/udp
-sudo ufw allow 1515/tcp
-```
+# 
 
 
 
