@@ -44,7 +44,14 @@ echo "wazuh_command.remote_commands=1" >> /var/ossec/etc/local_internal_options.
 /var/ossec/bin/ossec-control restart
 ```
 
+# 3. Cài đặt tool
 
+* Cài đặt OpenSCAP
 
+```
+sudo apt-get install libopenscap8 xsltproc -y
+```
+
+* 
 
 
