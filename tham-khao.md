@@ -2,6 +2,7 @@
   * OSSEC [http://ossec-docs.readthedocs.io/en/latest/manual/rules-decoders/rule-levels.html](http://ossec-docs.readthedocs.io/en/latest/manual/rules-decoders/rule-levels.html)
   * Syslog [https://en.wikipedia.org/wiki/Syslog](https://en.wikipedia.org/wiki/Syslog)
 * Wazuh:
+
   * Server 
     * [https://documentation.wazuh.com/current/installation-guide/installing-wazuh-server/index.html](https://documentation.wazuh.com/current/installation-guide/installing-wazuh-server/index.html)
     * [https://documentation.wazuh.com/current/installation-guide/installing-wazuh-server/wazuh\_server\_deb.html](https://documentation.wazuh.com/current/installation-guide/installing-wazuh-server/wazuh_server_deb.html)
@@ -13,9 +14,12 @@
     * [https://documentation.wazuh.com/current/installation-guide/installing-wazuh-agent/wazuh\_agent\_deb.html](https://documentation.wazuh.com/current/installation-guide/installing-wazuh-agent/wazuh_agent_deb.html)
   * Open port: [https://documentation.wazuh.com/current/docker/wazuh-container.html](https://documentation.wazuh.com/current/docker/wazuh-container.html)
   * Agent life cycle [https://documentation.wazuh.com/current/user-manual/agents/index.html](https://documentation.wazuh.com/current/user-manual/agents/index.html)
-  * Rules https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.htm
+  * Rules [https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.htm](https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.htm)
 
-  * Configuration https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/index.html
+  * Rule decode https://documentation.wazuh.com/current/user-manual/ruleset/custom.html
+
+  * Configuration [https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/index.html](https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/index.html)
+
 * OSSEC
   * Tất cả các module [link](https://glynrob.com/monitoring/ossec/)
 * [Tài liệu](https://ossec.github.io/docs/) OSSEC
