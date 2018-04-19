@@ -14,14 +14,17 @@
     * [https://documentation.wazuh.com/current/installation-guide/installing-wazuh-agent/wazuh\_agent\_deb.html](https://documentation.wazuh.com/current/installation-guide/installing-wazuh-agent/wazuh_agent_deb.html)
   * Open port: [https://documentation.wazuh.com/current/docker/wazuh-container.html](https://documentation.wazuh.com/current/docker/wazuh-container.html)
   * Agent life cycle [https://documentation.wazuh.com/current/user-manual/agents/index.html](https://documentation.wazuh.com/current/user-manual/agents/index.html)
+  * Configuration https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/index.html
   * Rules [https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.htm](https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.htm)
 
-  * Rule decode https://documentation.wazuh.com/current/user-manual/ruleset/custom.html
+  * Rule decode [https://documentation.wazuh.com/current/user-manual/ruleset/custom.html](https://documentation.wazuh.com/current/user-manual/ruleset/custom.html)
 
-  * Configuration [https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/index.html](https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/index.html)
+  * User manual https://documentation.wazuh.com/current/user-manual/index.html
 
 * OSSEC
+
   * Tất cả các module [link](https://glynrob.com/monitoring/ossec/)
+
 * [Tài liệu](https://ossec.github.io/docs/) OSSEC
   * OSSEC PCI DSS GUIDE [https://wazuh.com/resources/OSSEC\_PCI\_DSS\_Guide.pdf](https://wazuh.com/resources/OSSEC_PCI_DSS_Guide.pdf)
   * OSSEC RULESET [https://wazuh.com/resources/OSSEC\_Ruleset.pdf](https://wazuh.com/resources/OSSEC_Ruleset.pdf)
