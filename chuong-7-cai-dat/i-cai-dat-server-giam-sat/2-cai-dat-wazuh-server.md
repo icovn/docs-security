@@ -8,6 +8,18 @@ sudo echo "deb https://packages.wazuh.com/3.x/apt/ stable main" | tee -a /etc/ap
 sudo apt-get update
 ```
 
+* Cài đặt OpenSCAP
+
+```
+sudo apt-get install libopenscap8 xsltproc -y
+```
+
+* Cài đặt auditd
+
+```
+sudo apt-get install auditd -y
+```
+
 * Cài đặt **Wazuh Manager**
 
 ```
