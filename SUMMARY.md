@@ -12,8 +12,8 @@
   * [2 - Cài đặt server được giám sát ](chuong-7-cai-dat/2-cai-dat-server-duoc-giam-sat.md)
   * I. Cài đặt server giám sát
     * [1 - Cài đặt tường lửa](chuong-7-cai-dat/1-cai-dat-tuong-lua.md)
-    * 2 - Cài đặt Wazuh server
-    * 3 - Cài đặt Elastic Stack
+    * [2 - Cài đặt Wazuh server](chuong-7-cai-dat/2-cai-dat-wazuh-server.md)
+    * [3 - Cài đặt Elastic Stack](chuong-7-cai-dat/3-cai-dat-elastic-stack.md)
     * 4 - Tích hợp email và báo cáo ngày 
     * 5 - Tích hợp Slack
     * 6 - Cấu hình "Root check"
