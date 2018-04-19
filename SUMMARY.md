@@ -11,7 +11,7 @@
   * [1 - Cài đặt server giám sát](chuong-7-cai-dat/1-cai-dat-server-giam-sat.md)
   * [2 - Cài đặt server được giám sát ](chuong-7-cai-dat/2-cai-dat-server-duoc-giam-sat.md)
   * I. Cài đặt server giám sát
-    * 1 - Cài đặt tường lửa
+    * [1 - Cài đặt tường lửa](chuong-7-cai-dat/1-cai-dat-tuong-lua.md)
     * 2 - Cài đặt Wazuh server
     * 3 - Cài đặt Elastic Stack
     * 4 - Tích hợp email và báo cáo ngày 
