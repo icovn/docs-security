@@ -256,7 +256,7 @@ echo "Test mail from postfix" | mail -s "Test Postfix" you@example.com
 /var/ossec/bin/ossec-control restart
 ```
 
-# 5. Tích hợp Wazuh với Slack
+# 6. Tích hợp Wazuh với Slack
 
 * Bật integration
 
@@ -279,7 +279,7 @@ echo "Test mail from postfix" | mail -s "Test Postfix" you@example.com
 /var/ossec/bin/ossec-control restart
 ```
 
-# 6. Cấu hình "Active response"
+# 7. Cấu hình "Active response"
 
 * Cấu hình: Tham khảo [https://blog.wazuh.com/blocking-attacks-active-response/](https://blog.wazuh.com/blocking-attacks-active-response/)
 * Xem log
@@ -288,9 +288,9 @@ echo "Test mail from postfix" | mail -s "Test Postfix" you@example.com
 tail -f /var/ossec/logs/active-responses.log
 ```
 
-# 7. Cấu hình "Root check"
+# 8. Cấu hình "Root check"
 
-### 7.1. Kiểm tra có bật tường lửa
+### 8.1. Kiểm tra có bật tường lửa
 
 * Tạo file audit\_firewall.txt \(/var/ossec/etc/shared/default/audit\_firewall.txt\) với nội dung như sau 
 
@@ -312,15 +312,15 @@ f:$sshd_file -> r:^#\s*PermitRootLogin;
 </rootcheck>
 ```
 
-### 7.2. Kiểm tra có chạy đồng bộ thời gian tới server theo quy định hay không
+### 8.2. Kiểm tra có chạy đồng bộ thời gian tới server theo quy định hay không
 
-### 7.3. Kiểm tra có cấu hình log đúng quy định
+### 8.3. Kiểm tra có cấu hình log đúng quy định
 
-### 7.4. Kiểm tra nếu dùng PHP thì php.ini có để đúng quy định hay không
+### 8.4. Kiểm tra nếu dùng PHP thì php.ini có để đúng quy định hay không
 
-# 8. Cấu hình "Policy monitoring"
+# 9. Cấu hình "Policy monitoring"
 
-### 8.1. Đánh giá sự tuân thủ PCI-DSS của Ubuntu
+### 9.1. Đánh giá sự tuân thủ PCI-DSS của Ubuntu
 
 * Cập nhật cấu hình cho agent \(/var/ossec/etc/shared/default/agent.conf\)
 
@@ -363,7 +363,7 @@ Tham khảo:
 
 * [https://github.com/OpenSCAP/scap-security-guide](https://github.com/OpenSCAP/scap-security-guide)
 
-### 8.2. Kiểm tra lỗ hổng bảo mật của Ubuntu
+### 9.2. Kiểm tra lỗ hổng bảo mật của Ubuntu
 
 ### Cập nhật cấu hình cho agent \(/var/ossec/etc/shared/default/agent.conf\)
 
@@ -390,7 +390,7 @@ Tham khảo:
 /var/ossec/bin/agent_control -R -a
 ```
 
-### 8.3. Đánh giá sự tuân thủ PCI-DSS & Kiểm tra lỗ hổng bảo mật của RHEL7
+### 9.3. Đánh giá sự tuân thủ PCI-DSS & Kiểm tra lỗ hổng bảo mật của RHEL7
 
 Tham khảo:
 
@@ -398,7 +398,7 @@ Tham khảo:
 
 Ghi chú: policy được lưu ở folder /var/ossec/wodles/oscap/content trên mỗi agent
 
-# 9. Cấu hình Rule
+# 10. Cấu hình Rule
 
 * Bổ sung custom rule
 
