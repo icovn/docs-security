@@ -16,9 +16,13 @@
     * [5 - Tích hợp Slack](chuong-7-cai-dat/5-tich-hop-slack.md)
     * [6 - Cấu hình "Root check"](chuong-7-cai-dat/6-cau-hinh-root-check.md)
     * [7 - Cấu hình "Policy monitoring"](chuong-7-cai-dat/7-cau-hinh-policy-monitoring.md)
-    * 8 - Cài đặt Prometheus Stack
-    * [9 - Các cài đặt khác](chuong-7-cai-dat/9-cac-cai-dat-khac.md)
+    * [8 - Cấu hình "System calls monitoring"](chuong-7-cai-dat/8-cau-hinh-system-calls-monitoring.md)
+    * [9 - Cấu hình "Command monitoring"](chuong-7-cai-dat/9-cau-hinh-command-monitoring.md)
+    * [10 - Cấu hình "Vulnerability detection"](chuong-7-cai-dat/10-cau-hinh-vulnerability-detection.md)
+    * [11 - Cài đặt Prometheus Stack](chuong-7-cai-dat/11-cai-dat-prometheus-stack.md)
+    * [12 - Các cài đặt và cấu hình khác](chuong-7-cai-dat/12-cac-cai-dat-va-cau-hinh-khac.md)
   * [II. Cài đặt server được giám sát](chuong-7-cai-dat/ii-cai-dat-server-duoc-giam-sat.md)
+  * 10 - Cấu hình "Vulnerability detection"
 * [Chương 8 - Vận hành](chuong-8-van-hanh.md)
   * [I. Vận hành server giám sát](chuong-8-van-hanh/i-van-hanh-server-giam-sat.md)
     * [1 - Cấu hình tập trung](chuong-8-van-hanh/i-van-hanh-server-giam-sat/1-cau-hinh-tap-trung.md)
