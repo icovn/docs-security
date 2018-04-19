@@ -6,7 +6,7 @@
     <logall>yes</logall>
     <logall_json>yes</logall_json>
   </global>
-</ossec_config>  
+</ossec_config>
 ```
 
 * Restart server
@@ -24,7 +24,7 @@ tailf /var/ossec/logs/archives/archives.json
 * Test log
 
 ```
-
+/var/ossec/bin/ossec-logtest -v
 ```
 
 
