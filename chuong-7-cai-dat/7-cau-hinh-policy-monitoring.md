@@ -1,10 +1,4 @@
-# 
-
-# 
-
-# 9. Cấu hình "Policy monitoring"
-
-### 9.1. Đánh giá sự tuân thủ PCI-DSS của Ubuntu
+### 1. Đánh giá sự tuân thủ PCI-DSS của Ubuntu
 
 * Cập nhật cấu hình cho agent \(/var/ossec/etc/shared/default/agent.conf\)
 
@@ -47,7 +41,7 @@ Tham khảo:
 
 * [https://github.com/OpenSCAP/scap-security-guide](https://github.com/OpenSCAP/scap-security-guide)
 
-### 9.2. Kiểm tra lỗ hổng bảo mật của Ubuntu
+### 2. Kiểm tra lỗ hổng bảo mật của Ubuntu
 
 ### Cập nhật cấu hình cho agent \(/var/ossec/etc/shared/default/agent.conf\)
 
@@ -74,35 +68,11 @@ Tham khảo:
 /var/ossec/bin/agent_control -R -a
 ```
 
-### 9.3. Đánh giá sự tuân thủ PCI-DSS & Kiểm tra lỗ hổng bảo mật của RHEL7
+### 3. Đánh giá sự tuân thủ PCI-DSS & Kiểm tra lỗ hổng bảo mật của RHEL7
 
 Tham khảo:
 
 * [https://documentation.wazuh.com/current/user-manual/capabilities/policy-monitoring/openscap/oscap-configuration.html](https://documentation.wazuh.com/current/user-manual/capabilities/policy-monitoring/openscap/oscap-configuration.html)
 
 Ghi chú: policy được lưu ở folder /var/ossec/wodles/oscap/content trên mỗi agent
-
-# 10. Cấu hình Rule
-
-* Bổ sung custom rule
-
-```
-vi /var/ossec/etc/rules/local_rules.xml
-```
-
-* Kiểm thử rule
-
-```
-/var/ossec/bin/ossec-logtest
-#sau đó paste log vào, vd: Mar  8 22:39:13 ip-10-0-0-10 sshd[2742]: Accepted publickey for root from 73.189.131.56 port 57516
-```
-
-* Debug rule
-
-```
-/var/ossec/bin/ossec-logtest -v
-```
-
-* 
-
 

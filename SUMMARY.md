@@ -14,10 +14,12 @@
     * [1 - Cài đặt tường lửa](chuong-7-cai-dat/1-cai-dat-tuong-lua.md)
     * [2 - Cài đặt Wazuh server](chuong-7-cai-dat/2-cai-dat-wazuh-server.md)
     * [3 - Cài đặt Elastic Stack](chuong-7-cai-dat/3-cai-dat-elastic-stack.md)
-    * 4 - Tích hợp email và báo cáo ngày 
-    * 5 - Tích hợp Slack
-    * 6 - Cấu hình "Root check"
-    * 7 - Cấu hình "Policy monitoring"
+    * [4 - Tích hợp email và báo cáo ngày ](chuong-7-cai-dat/4-tich-hop-email-va-bao-cao-ngay.md)
+    * [5 - Tích hợp Slack](chuong-7-cai-dat/5-tich-hop-slack.md)
+    * [6 - Cấu hình "Root check"](chuong-7-cai-dat/6-cau-hinh-root-check.md)
+    * [7 - Cấu hình "Policy monitoring"](chuong-7-cai-dat/7-cau-hinh-policy-monitoring.md)
+    * 8 - Cài đặt Prometheus Stack
+    * [9 - Các cài đặt khác](chuong-7-cai-dat/9-cac-cai-dat-khac.md)
   * [II. Cài đặt server được giám sát](chuong-7-cai-dat/ii-cai-dat-server-duoc-giam-sat.md)
 * [Chương 8 - Vận hành](chuong-8-van-hanh.md)
   * [I. Vận hành server giám sát](chuong-8-van-hanh/i-van-hanh-server-giam-sat.md)
