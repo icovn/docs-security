@@ -150,7 +150,7 @@ sudo systemctl restart nginx
 https://documentation.wazuh.com/current/installation-guide/installing-elastic-stack/connect_wazuh_app.html
 ```
 
-# 3. Tích hợp với email
+# 3. Tích hợp Wazuh với email
 
 * Cài đặt thư viện
 
@@ -209,7 +209,7 @@ echo "Test mail from postfix" | mail -s "Test Postfix" you@example.com
 </global>
 ```
 
-# 4. Tích hợp với Slack
+# 4. Tích hợp Wazuh với Slack
 
 * Bật integration
 
@@ -308,10 +308,12 @@ f:$sshd_file -> r:^#\s*PermitRootLogin;
 
 Tham khảo:
 
-* https://documentation.wazuh.com/current/user-manual/capabilities/policy-monitoring/openscap/how-it-works.html
+* [https://documentation.wazuh.com/current/user-manual/capabilities/policy-monitoring/openscap/how-it-works.html](https://documentation.wazuh.com/current/user-manual/capabilities/policy-monitoring/openscap/how-it-works.html)
 
 * [https://static.open-scap.org/ssg-guides/ssg-ubuntu1604-guide-common.html](https://static.open-scap.org/ssg-guides/ssg-ubuntu1604-guide-common.html)
+
 * [https://www.open-scap.org/security-policies/choosing-policy/](https://www.open-scap.org/security-policies/choosing-policy/)
+
 * [https://github.com/OpenSCAP/scap-security-guide](https://github.com/OpenSCAP/scap-security-guide)
 
 ### 7.2. Kiểm tra lỗ hổng bảo mật của Ubuntu
@@ -355,6 +357,26 @@ Ghi chú: policy được lưu ở folder /var/ossec/wodles/oscap/content trên 
 
 ```
 vi /var/ossec/etc/rules/local_rules.xml
+```
+
+# 9. Cài đặt tường lửa
+
+* Cài đặt ufw
+
+```
+sudo apt-get install ufw -y
+```
+
+* Cấu hình ufw
+
+```
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow 22
+sudo ufw allow 80
+sudo ufw allow 1322
+sudo ufw allow 1514/udp
+sudo ufw allow 1515/tcp
 ```
 
 

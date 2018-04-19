@@ -18,7 +18,7 @@
     * 2 - Cập nhật outdate agent
     * 3 - Root check
     * 4 - Policy monitoring 
-  * II. Vận hành server được giám sát
+  * [II. Vận hành server được giám sát](chuong-8-van-hanh/ii-van-hanh-server-duoc-giam-sat.md)
 * [Tham khảo](tham-khao.md)
   * [Tool](tham-khao/tool.md)
   * [OSSEC](tham-khao/ossec.md)

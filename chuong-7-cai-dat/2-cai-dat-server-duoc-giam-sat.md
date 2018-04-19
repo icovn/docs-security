@@ -1,4 +1,22 @@
-# 1. Cài đặt Wazuh agent
+# 1. Cài đặt tường lửa
+
+* Cài đặt ufw
+
+```
+sudo apt-get install ufw -y
+```
+
+* Cấu hình ufw
+
+```
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow 22
+sudo ufw allow 80
+sudo ufw allow 1322
+```
+
+# 2. Cài đặt Wazuh agent
 
 * Cài đặt thư viện
 
@@ -16,7 +34,7 @@ sudo apt-get update
 sudo apt-get install wazuh-agent -y
 ```
 
-# 2. Đăng ký agent với manager
+# 3. Đăng ký agent với manager
 
 * Đăng ký agent \(ip 210.245.3.67\) với manager có ip 118.70.223.163
 
