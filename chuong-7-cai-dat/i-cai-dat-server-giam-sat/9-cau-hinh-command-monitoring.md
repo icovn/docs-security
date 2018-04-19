@@ -14,8 +14,7 @@
 
 ```
 <rule id="100103" level="3">
-  <!-- <list field="audit.key" lookup="match_key_value" check_value="command">etc/lists/audit-keys</list> -->
-  <list field="audit.key" lookup="match_key">etc/lists/audit-keys</list>
+  <match>^Status: inactive</match>
   <description>Audit: Command: $(audit.exe)</description>
   <group>audit_command,</group>
 </rule>
