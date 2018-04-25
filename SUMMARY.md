@@ -31,8 +31,9 @@
     * [5 - Debug OSSEC](chuong-8-van-hanh/i-van-hanh-server-giam-sat/5-debug-ossec.md)
   * [II. Vận hành server được giám sát](chuong-8-van-hanh/ii-van-hanh-server-duoc-giam-sat.md)
 * [Tham khảo](tham-khao.md)
-  * [Tool](tham-khao/tool.md)
-  * [OSSEC](tham-khao/ossec.md)
-  * [Wazuh](tham-khao/wazuh.md)
   * [Ansible](tham-khao/ansible.md)
+  * [OSSEC](tham-khao/ossec.md)
+  * [Redis](tham-khao/redis.md)
+  * [Tool](tham-khao/tool.md)
+  * [Wazuh](tham-khao/wazuh.md)
 
