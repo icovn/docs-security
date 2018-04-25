@@ -3,11 +3,11 @@
 * Cài đặt
 
 ```
-apt-get install lsb-release software-properties-common 
+apt-get install lsb-release software-properties-common -y
 apt-add-repository ppa:ansible/ansible
 apt-get update
-apt-get install ansible
-apt-get install sshpass
+apt-get install ansible -y
+apt-get install sshpass -y
 ```
 
 * Cấu hình hosts
