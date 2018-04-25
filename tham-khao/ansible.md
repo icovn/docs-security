@@ -1,4 +1,4 @@
-Cài đặt
+* Cài đặt
 
 ```
 apt-get install lsb-release software-properties-common 
@@ -8,13 +8,7 @@ apt-get install ansible
 apt-get install sshpass
 ```
 
-Cấu hình connection user cho Ansible
-
-```
-ansible -m setup all -u ubuntu -k -b -K
-```
-
-Cấu hình hosts
+* Cấu hình hosts
 
 ```
 vi /etc/ansible/hosts
@@ -24,13 +18,21 @@ hosts1.example.net
 hosts2.example.net
 ```
 
-Kiểm thử kết nối tới các hosts
+* Sinh SSH key
+
+```
+ssh-keygen
+```
+
+* Copy nội dung của ~/.ssh/id\_rsa.pub  vào file ~/.ssh/authorized\_keys trên các host
+
+* Kiểm thử kết nối tới các hosts
 
 ```
 ansible all -m ping
 ```
 
-Roles
+* Roles
 
 ```
 cd /etc/ansible/roles
