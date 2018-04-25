@@ -1,3 +1,5 @@
+# 1. Cài đặt Ansible
+
 * Cài đặt
 
 ```
@@ -30,6 +32,14 @@ ssh-keygen
 
 ```
 ansible all -m ping
+```
+
+# 2. Cài đặt Ansible-semaphore
+
+* Cài đặt mysql server
+
+```
+sudo apt-get install mysql-server -y
 ```
 
 * Roles
