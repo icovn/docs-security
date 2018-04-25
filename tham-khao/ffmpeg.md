@@ -1,3 +1,5 @@
+* Cài đặt
+
 ```
 apt-get update -qq && apt-get -y install \
   autoconf \
@@ -114,7 +116,12 @@ PATH="/u01/bin/:$PATH" PKG_CONFIG_PATH="/u01/applications/ffmpeg-3.4.2/lib/pkgco
 PATH="/u01/bin/:$PATH" make && \
 make install && \
 hash -r
+```
 
+* Convert video
+
+```
+ffmpeg -y -i /video_recordings/c5a77a34-212e-4861-b699-a53f1ba1a820.flv -acodec libfdk_aac -ar 44100 -ac 1 -vcodec libx264 /video_recordings/mp4/c5a77a34-212e-4861-b699-a53f1ba1a820.mp4 
 ```
 
 
