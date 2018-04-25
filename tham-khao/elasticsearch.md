@@ -25,8 +25,22 @@ http.cors.allow-credentials: true
 transport.tcp.port: 9333
 ```
 
-* Start
-* Stop
+* Start \(/u01/applications/elasticsearch-2.4.6/start.sh\)
+
+```
+/u01/applications/elasticsearch-2.4.6/bin/elasticsearch -d
+```
+
+* Stop \(/u01/applications/elasticsearch-2.4.6/stop.sh\)
+
+```
+PIDS="$(pgrep -f elasticsearch-2.4.6)"
+if [ -z "$PIDS" ]; then
+echo "nothing"
+else
+kill -SIGTERM $PIDS
+fi
+```
 
 
 
