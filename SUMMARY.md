@@ -32,6 +32,7 @@
   * [II. Vận hành server được giám sát](chuong-8-van-hanh/ii-van-hanh-server-duoc-giam-sat.md)
 * [Tham khảo](tham-khao.md)
   * [Ansible](tham-khao/ansible.md)
+  * [Elasticsearch](tham-khao/elasticsearch.md)
   * [OSSEC](tham-khao/ossec.md)
   * [Redis](tham-khao/redis.md)
   * [Tool](tham-khao/tool.md)
