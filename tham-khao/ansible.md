@@ -42,6 +42,13 @@ ansible all -m ping
 sudo apt-get install mysql-server -y
 ```
 
+* Cài đặt semaphore
+
+```
+curl https://github.com/ansible-semaphore/semaphore/releases/download/v2.5.0/semaphore_2.5.0_linux_amd64.deb
+sudo dpkg -i semaphore_2.5.0_linux_amd64.deb
+```
+
 * Roles
 
 ```
