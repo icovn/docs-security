@@ -1,3 +1,9 @@
+* Chọn folder cài đặt
+
+```
+choco install 1password --install-directory 'D:\1Password' -y
+```
+
 * osqueryi
 
 ```
