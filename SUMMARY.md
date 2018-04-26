@@ -35,10 +35,11 @@
   * [Chocolatey](tham-khao/chocolatey.md)
   * [Elasticsearch](tham-khao/elasticsearch.md)
   * [FFMPEG](tham-khao/ffmpeg.md)
+  * [NFS](tham-khao/nfs.md)
   * [Nginx](tham-khao/nginx.md)
   * [Osquery](tham-khao/osquery.md)
   * [OSSEC](tham-khao/ossec.md)
   * [Redis](tham-khao/redis.md)
   * [Tool](tham-khao/tool.md)
-  * [Wazuh](tham-khao/wazuh.md)
+  * NFS
 
