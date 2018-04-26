@@ -35,6 +35,7 @@
   * [Chocolatey](tham-khao/chocolatey.md)
   * [Elasticsearch](tham-khao/elasticsearch.md)
   * [FFMPEG](tham-khao/ffmpeg.md)
+  * [Nginx](tham-khao/nginx.md)
   * [Osquery](tham-khao/osquery.md)
   * [OSSEC](tham-khao/ossec.md)
   * [Redis](tham-khao/redis.md)
