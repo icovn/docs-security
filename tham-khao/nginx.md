@@ -122,11 +122,11 @@ rtmp {
 server {
     listen 8888;
     server_name streaming.topicanative.edu.vn;
- 
+
     error_page 404 /static/404.html;
     access_log logs/streaming.topicanative.edu.vn.access.log;
     error_log  logs/streaming.topicanative.edu.vn.error.log;
- 
+
     #creates the http-location for our full-resolution (desktop) HLS stream - "http://my-ip/live/my-stream-key/index.m3u8"     
     location /live {
         types {
@@ -135,11 +135,11 @@ server {
         }
         root /u01/appplications/room-video/live;
         add_header Cache-Control no-cache;
- 
+
         # CORS setup
         add_header 'Access-Control-Allow-Origin' '*' always;
         add_header 'Access-Control-Expose-Headers' 'Content-Length';
- 
+
         # allow CORS preflight requests
         if ($request_method = 'OPTIONS') {
             add_header 'Access-Control-Allow-Origin' '*';
@@ -149,7 +149,7 @@ server {
             return 204;
         }
     }
- 
+
     #creates the http-location for our mobile-device HLS stream - "http://my-ip/mobile/my-stream-key/index.m3u8"       
     location /mobile {
         types {
@@ -158,7 +158,7 @@ server {
         alias /u01/applications/room-video/mobile;
         add_header Cache-Control no-cache;
     }
- 
+
     location /vod {
         types {
             video/mp4 mp4;
@@ -166,35 +166,35 @@ server {
         alias /u01/applications/room-video/mp4;
         add_header Cache-Control no-cache;
     }  
-    
+
     location /status {
         vhost_traffic_status_display;
         vhost_traffic_status_display_format html;
     }  
- 
+
     error_page   500 502 503 504  /50x.html;
     location = /50x.html {
         root   html;
     }
 }
- 
+
 server {
     listen 9999;
     server_name streaming.topicanative.edu.vn;
- 
+
     location /control {
         rtmp_control all;
     }
- 
+
     # This URL provides RTMP statistics in XML
     location /stat {
         rtmp_stat all;
- 
+
         # Use this stylesheet to view XML as web page
         # in browser
         rtmp_stat_stylesheet stat.xsl;
     }
- 
+
     location /stat.xsl {
         # XML stylesheet to view RTMP stats.
         # Copy stat.xsl wherever you want
@@ -202,10 +202,88 @@ server {
         root /u01/applications/nginx-1.12.2/stat/;
     }
 }
-
 ```
 
 * Cấu hình live.topicanative.edu.vn
+
+```
+upstream roomManager {
+    server 210.245.3.67:8083;
+    server 210.245.3.69:8083;
+    server 210.245.3.86:8083;
+}
+
+upstream roomWebSocket {
+    server 210.245.3.67:8085;
+    server 210.245.3.69:8085;
+    server 210.245.3.86:8085;
+}
+
+server {
+    listen 8888;
+    server_name live.topicanative.edu.vn;
+ 
+    root /u01/applications/livestream-public;
+    index index.html index.htm;
+ 
+    error_page 404 /static/404.html;
+    access_log logs/live.topicanative.edu.vn.access.log;
+    error_log  logs/live.topicanative.edu.vn.error.log;
+ 
+    client_max_body_size 100m;
+ 
+    location ~ ^/api(.*)$ {
+        proxy_pass http://roomManager;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+ 
+    location ~ ^/material(.*)$ {
+        root /u01/applications/room-material/;
+    }
+ 
+    location ~ ^/socket(.*)$ {
+        proxy_pass http://roomWebSocket;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+ 
+        # WebSocket support (nginx 1.4)
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    location ~ ^/stream(.*)$ {
+        proxy_pass http://roomManager;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }    
+ 
+    location ~ ^/video(.*)$ {
+        root /u01/applications/room-video/;
+    }
+ 
+    location ~ ^/ws(.*)$ {
+        proxy_pass http://roomWebSocket;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /status {
+        vhost_traffic_status_display;
+        vhost_traffic_status_display_format html;
+    }
+ 
+    location / {
+ 
+    }
+}
+
+```
 
 
 
