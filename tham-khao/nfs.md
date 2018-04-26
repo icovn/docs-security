@@ -33,7 +33,7 @@ sudo mount 210.245.3.86:/u01/applications/nfs/general /u01/applications/nfs/gene
 * Bỏ mount ở client
 
 ```
-sudo umount /nfs/home
+sudo umount /u01/applications/nfs/general
 ```
 
 
