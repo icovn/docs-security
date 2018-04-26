@@ -116,7 +116,7 @@ rtmp {
 }
 ```
 
-* Cấu hình streaming.topicanative.edu.vn
+* Cấu hình streaming.topicanative.edu.vn.conf
 
 ```
 server {
@@ -204,7 +204,7 @@ server {
 }
 ```
 
-* Cấu hình live.topicanative.edu.vn
+* Cấu hình live.topicanative.edu.vn.conf
 
 ```
 upstream roomManager {
