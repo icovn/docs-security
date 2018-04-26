@@ -30,6 +30,11 @@ mkdir -p /u01/applications/nfs/general
 sudo mount 210.245.3.86:/u01/applications/nfs/general /u01/applications/nfs/general
 ```
 
-* 
+* Bỏ mount ở client
+
+```
+sudo umount /nfs/home
+```
+
 
 
