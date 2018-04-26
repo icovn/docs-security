@@ -116,9 +116,9 @@ rtmp {
 }
 ```
 
-* Cấu hình live.topicanative.edu.vn
-
 * Cấu hình streaming.topicanative.edu.vn
+
+* Cấu hình live.topicanative.edu.vn
 
 
 
