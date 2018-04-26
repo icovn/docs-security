@@ -222,33 +222,33 @@ upstream roomWebSocket {
 server {
     listen 8888;
     server_name live.topicanative.edu.vn;
- 
+
     root /u01/applications/livestream-public;
     index index.html index.htm;
- 
+
     error_page 404 /static/404.html;
     access_log logs/live.topicanative.edu.vn.access.log;
     error_log  logs/live.topicanative.edu.vn.error.log;
- 
+
     client_max_body_size 100m;
- 
+
     location ~ ^/api(.*)$ {
         proxy_pass http://roomManager;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header Host $host;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }
- 
+
     location ~ ^/material(.*)$ {
         root /u01/applications/room-material/;
     }
- 
+
     location ~ ^/socket(.*)$ {
         proxy_pass http://roomWebSocket;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header Host $host;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
- 
+
         # WebSocket support (nginx 1.4)
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
@@ -261,11 +261,11 @@ server {
         proxy_set_header Host $host;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }    
- 
+
     location ~ ^/video(.*)$ {
         root /u01/applications/room-video/;
     }
- 
+
     location ~ ^/ws(.*)$ {
         proxy_pass http://roomWebSocket;
         proxy_set_header X-Real-IP $remote_addr;
@@ -277,12 +277,18 @@ server {
         vhost_traffic_status_display;
         vhost_traffic_status_display_format html;
     }
- 
+
     location / {
- 
+
     }
 }
+```
 
+* Script convert /u01/applications/convert-flv-to-mp4.sh
+
+```
+/u01/bin/ffmpeg -y -i /u01/applications/room-video/$name.flv -acodec libfdk_aac -ar 44100 -ac 1 -vcodec libx264 /u01/applications/room-video/mp4/$name.mp4
+curl "http://live.topicanative.edu.vn:8888/stream/on_convert_done?name=${name}"
 ```
 
 
