@@ -118,6 +118,93 @@ rtmp {
 
 * Cấu hình streaming.topicanative.edu.vn
 
+```
+server {
+    listen 8888;
+    server_name streaming.topicanative.edu.vn;
+ 
+    error_page 404 /static/404.html;
+    access_log logs/streaming.topicanative.edu.vn.access.log;
+    error_log  logs/streaming.topicanative.edu.vn.error.log;
+ 
+    #creates the http-location for our full-resolution (desktop) HLS stream - "http://my-ip/live/my-stream-key/index.m3u8"     
+    location /live {
+        types {
+            application/vnd.apple.mpegurl m3u8;
+            video/mp2t ts;
+        }
+        root /u01/appplications/room-video/live;
+        add_header Cache-Control no-cache;
+ 
+        # CORS setup
+        add_header 'Access-Control-Allow-Origin' '*' always;
+        add_header 'Access-Control-Expose-Headers' 'Content-Length';
+ 
+        # allow CORS preflight requests
+        if ($request_method = 'OPTIONS') {
+            add_header 'Access-Control-Allow-Origin' '*';
+            add_header 'Access-Control-Max-Age' 1728000;
+            add_header 'Content-Type' 'text/plain charset=UTF-8';
+            add_header 'Content-Length' 0;
+            return 204;
+        }
+    }
+ 
+    #creates the http-location for our mobile-device HLS stream - "http://my-ip/mobile/my-stream-key/index.m3u8"       
+    location /mobile {
+        types {
+            application/vnd.apple.mpegurl m3u8;
+        }
+        alias /u01/applications/room-video/mobile;
+        add_header Cache-Control no-cache;
+    }
+ 
+    location /vod {
+        types {
+            video/mp4 mp4;
+        }
+        alias /u01/applications/room-video/mp4;
+        add_header Cache-Control no-cache;
+    }  
+    
+    location /status {
+        vhost_traffic_status_display;
+        vhost_traffic_status_display_format html;
+    }  
+ 
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   html;
+    }
+}
+ 
+server {
+    listen 9999;
+    server_name streaming.topicanative.edu.vn;
+ 
+    location /control {
+        rtmp_control all;
+    }
+ 
+    # This URL provides RTMP statistics in XML
+    location /stat {
+        rtmp_stat all;
+ 
+        # Use this stylesheet to view XML as web page
+        # in browser
+        rtmp_stat_stylesheet stat.xsl;
+    }
+ 
+    location /stat.xsl {
+        # XML stylesheet to view RTMP stats.
+        # Copy stat.xsl wherever you want
+        # and put the full directory path here
+        root /u01/applications/nginx-1.12.2/stat/;
+    }
+}
+
+```
+
 * Cấu hình live.topicanative.edu.vn
 
 
