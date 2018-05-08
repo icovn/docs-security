@@ -43,4 +43,5 @@
   * [tcpdump](tham-khao/tcpdump.md)
   * [Tool](tham-khao/tool.md)
   * [Wireshark](tham-khao/wireshark.md)
+  * [Ubuntu](tham-khao/ubuntu.md)
 
