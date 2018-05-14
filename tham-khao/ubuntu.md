@@ -41,7 +41,12 @@ Máy client
 
 ```
 ssh-keygen
+```
 
+SSH
+
+```
+ssh -i /var/lib/rundeck/.ssh/id_rsa huynq12@210.211.96.103 -p 1524
 ```
 
 
