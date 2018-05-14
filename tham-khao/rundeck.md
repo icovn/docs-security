@@ -21,7 +21,7 @@ Kiểm tra trạng thái
 /etc/init.d/rundeckd status
 ```
 
-# 2. Đổi URL truy cập \(run behind Nginx\)
+# 3. Đổi URL truy cập \(run behind Nginx\)
 
 Cấu hình nginx
 
@@ -44,7 +44,7 @@ sed -i "/^framework.server.url/c framework.server.url = ${RUNDECK_URL}" /etc/run
 sed -i '/^RDECK_JVM="$RDECK_JVM/ s/"$/ -Dserver.web.context=\/rundeck"/' /etc/rundeck/profile
 ```
 
-# 3. Đổi password admin
+# 4. Đổi password admin
 
 Generate a random password
 
@@ -76,7 +76,7 @@ Restart rundeck
 service rundeckd restart
 ```
 
-# 4. Tham khảo
+# 5. Tham khảo
 
 [https://www.rundeck.com/ansible](https://www.rundeck.com/ansible)
 
