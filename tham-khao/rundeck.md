@@ -2,6 +2,27 @@
 
 # 2. Đổi URL truy cập \(run behind Nginx\)
 
+Cấu hình nginx
+
+```
+location / {
+    proxy_pass http://rundeck/;
+    
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-Host $host:$server_port;
+    proxy_set_header X-Forwarded-Server $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+}
+```
+
+Cấu hình rundeck
+
+```
+sed -i "/^grails.serverURL/c grails.serverURL = ${RUNDECK_URL}" /etc/rundeck/rundeck-config.properties
+sed -i "/^framework.server.url/c framework.server.url = ${RUNDECK_URL}" /etc/rundeck/framework.properties
+sed -i '/^RDECK_JVM="$RDECK_JVM/ s/"$/ -Dserver.web.context=\/rundeck"/' /etc/rundeck/profile
+```
+
 # 3. Đổi password admin
 
 Generate a random password
@@ -34,7 +55,11 @@ Restart rundeck
 service rundeckd restart
 ```
 
-# 4. Tham khảo 
+# 4. Tham khảo
 
-https://www.rundeck.com/ansible
+[https://www.rundeck.com/ansible](https://www.rundeck.com/ansible)
+
+https://github.com/rundeck-plugins
+
+
 
