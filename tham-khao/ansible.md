@@ -80,19 +80,22 @@ Tasks call **modules**
 
 # 5. Tham khảo
 
-[http://docs.ansible.com/ansible/latest/installation\_guide/intro\_installation.html](#)
+* Install
+  * [http://docs.ansible.com/ansible/latest/installation\_guide/intro\_installation.html](#)
 
-[https://github.com/ansible/ansible-doctor](https://github.com/ansible/ansible-doctor)
+  * [https://github.com/ansible/ansible-doctor](https://github.com/ansible/ansible-doctor)
+* Sử dụng
+  * [https://www.ansible.com/resources/get-started](#)
 
-[https://www.ansible.com/resources/get-started](#)
+  * [http://docs.ansible.com/ansible/latest/modules/modules\_by\_category.html](http://docs.ansible.com/ansible/latest/modules/modules_by_category.html)
 
-[http://docs.ansible.com/ansible/latest/modules/modules\_by\_category.html](http://docs.ansible.com/ansible/latest/modules/modules_by_category.html)
+  * [http://docs.ansible.com/ansible/latest/user\_guide/playbooks\_reuse.html](http://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse.html)
 
-[http://docs.ansible.com/ansible/latest/user\_guide/playbooks\_reuse.html](http://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse.html)
+  * [https://github.com/ansible/ansible-examples](#)
+* Docker container
+  * [https://github.com/ansible/hello-world](#)
 
-[https://github.com/ansible/hello-world](https://github.com/ansible/hello-world)
+  * [https://github.com/ansible/ansible-kubernetes-modules](#)
 
-[https://github.com/ansible/ansible-examples](https://github.com/ansible/ansible-examples)
 
-[https://github.com/ansible/ansible-kubernetes-modules](https://github.com/ansible/ansible-kubernetes-modules)
 
