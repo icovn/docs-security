@@ -1,6 +1,6 @@
 # 1. Cài đặt
 
-#  2. Đổi URL truy cập \(run behind Nginx\)
+# 2. Đổi URL truy cập \(run behind Nginx\)
 
 # 3. Đổi password admin
 
@@ -34,5 +34,7 @@ Restart rundeck
 service rundeckd restart
 ```
 
+# 4. Tham khảo 
 
+https://www.rundeck.com/ansible
 
