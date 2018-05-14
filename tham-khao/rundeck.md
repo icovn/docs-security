@@ -78,6 +78,8 @@ service rundeckd restart
 
 # 5. Tham khảo
 
+http://rundeck.org/docs/
+
 [https://www.rundeck.com/ansible](https://www.rundeck.com/ansible)
 
 [https://github.com/rundeck-plugins](https://github.com/rundeck-plugins)
