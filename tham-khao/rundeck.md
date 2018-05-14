@@ -76,9 +76,24 @@ Restart rundeck
 service rundeckd restart
 ```
 
-# 5. Tham khảo
+# 5. Cài đặt plugin
 
-http://rundeck.org/docs/
+Download plugin để vào folder /var/lib/rundeck/libext/
+
+```
+cd  /var/lib/rundeck/libext/
+wget https://github.com/Batix/rundeck-ansible-plugin/releases/download/2.4.0/ansible-plugin-2.4.0.jar
+```
+
+Restart 
+
+```
+/etc/init.d/rundeckd restart
+```
+
+# 6. Tham khảo
+
+[http://rundeck.org/docs/](http://rundeck.org/docs/)
 
 [https://www.rundeck.com/ansible](https://www.rundeck.com/ansible)
 
