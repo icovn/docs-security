@@ -13,6 +13,14 @@ apt-get install openjdk-8-jdk
 dpkg -i rundeck_2.11.3-1-GA_all.deb
 ```
 
+# 2. Vận hành
+
+Kiểm tra trạng thái
+
+```
+/etc/init.d/rundeckd status
+```
+
 # 2. Đổi URL truy cập \(run behind Nginx\)
 
 Cấu hình nginx
