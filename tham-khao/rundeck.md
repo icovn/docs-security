@@ -1,5 +1,18 @@
 # 1. Cài đặt
 
+Download file cài
+
+```
+wget http://dl.bintray.com/rundeck/rundeck-deb/rundeck_2.11.3-1-GA_all.deb
+```
+
+Thực hiện cài đặt
+
+```
+apt-get install openjdk-8-jdk
+dpkg -i rundeck_2.11.3-1-GA_all.deb
+```
+
 # 2. Đổi URL truy cập \(run behind Nginx\)
 
 Cấu hình nginx
@@ -7,7 +20,7 @@ Cấu hình nginx
 ```
 location / {
     proxy_pass http://rundeck/;
-    
+
     proxy_set_header X-Forwarded-Proto $scheme;
     proxy_set_header X-Forwarded-Host $host:$server_port;
     proxy_set_header X-Forwarded-Server $host;
@@ -59,7 +72,5 @@ service rundeckd restart
 
 [https://www.rundeck.com/ansible](https://www.rundeck.com/ansible)
 
-https://github.com/rundeck-plugins
-
-
+[https://github.com/rundeck-plugins](https://github.com/rundeck-plugins)
 
