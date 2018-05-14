@@ -35,7 +35,14 @@ session required pam_limits.so
 
 ##### Logout, login và chạy lại lệnh kiểm tra
 
+# Tạo SSH key
 
+Máy client
+
+```
+ssh-keygen
+
+```
 
 
 

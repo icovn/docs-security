@@ -85,7 +85,7 @@ cd  /var/lib/rundeck/libext/
 wget https://github.com/Batix/rundeck-ansible-plugin/releases/download/2.4.0/ansible-plugin-2.4.0.jar
 ```
 
-Restart 
+Restart
 
 ```
 /etc/init.d/rundeckd restart
@@ -95,7 +95,13 @@ Restart
 
 [http://rundeck.org/docs/](http://rundeck.org/docs/)
 
+http://rundeck.org/docs/administration/index.html
+
+http://rundeck.org/docs/plugins-user-guide/index.html
+
 [https://www.rundeck.com/ansible](https://www.rundeck.com/ansible)
 
 [https://github.com/rundeck-plugins](https://github.com/rundeck-plugins)
+
+
 

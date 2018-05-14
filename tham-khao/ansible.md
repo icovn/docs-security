@@ -68,7 +68,11 @@ Tasks call **modules**
 
 **Handlers** are triggered by **tasks**, and are run oncce, at the end of plays
 
-# 4. Tham khảo
+# 4. Admin GUI
+
+https://github.com/vstconsulting/polemarch
+
+# 5. Tham khảo
 
 [https://www.ansible.com/resources/get-started](https://www.ansible.com/resources/get-started)
 
@@ -78,11 +82,15 @@ Tasks call **modules**
 
 [http://docs.ansible.com/ansible/latest/modules/modules\_by\_category.html](http://docs.ansible.com/ansible/latest/modules/modules_by_category.html)
 
-http://docs.ansible.com/ansible/latest/user\_guide/playbooks\_reuse.html
+[http://docs.ansible.com/ansible/latest/user\_guide/playbooks\_reuse.html](http://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse.html)
 
 [https://github.com/ansible/hello-world](https://github.com/ansible/hello-world)
 
 [https://github.com/ansible/ansible-examples](https://github.com/ansible/ansible-examples)
 
 [https://github.com/ansible/ansible-kubernetes-modules](https://github.com/ansible/ansible-kubernetes-modules)
+
+
+
+
 

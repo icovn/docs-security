@@ -43,6 +43,7 @@
   * [Rundeck](tham-khao/rundeck.md)
   * [tcpdump](tham-khao/tcpdump.md)
   * [Tool](tham-khao/tool.md)
+  * [Wahuz](tham-khao/wahuz.md)
   * [Wireshark](tham-khao/wireshark.md)
   * [Ubuntu](tham-khao/ubuntu.md)
 
