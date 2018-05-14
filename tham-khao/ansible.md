@@ -64,11 +64,7 @@ Plays contain **tasks**
 
 Tasks call **modules**
 
-
-
 **Tasks** run **sequentially**
-
-
 
 **Handlers** are triggered by **tasks**, and are run oncce, at the end of plays
 
@@ -79,6 +75,8 @@ Tasks call **modules**
 [https://github.com/ansible/ansible-doctor](https://github.com/ansible/ansible-doctor)
 
 [http://docs.ansible.com/ansible/latest/installation\_guide/intro\_installation.html](http://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+
+http://docs.ansible.com/ansible/latest/modules/modules\_by\_category.html
 
 [https://github.com/ansible/hello-world](https://github.com/ansible/hello-world)
 
