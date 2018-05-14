@@ -40,6 +40,7 @@
   * [Osquery](tham-khao/osquery.md)
   * [OSSEC](tham-khao/ossec.md)
   * [Redis](tham-khao/redis.md)
+  * [Rundeck](tham-khao/rundeck.md)
   * [tcpdump](tham-khao/tcpdump.md)
   * [Tool](tham-khao/tool.md)
   * [Wireshark](tham-khao/wireshark.md)
