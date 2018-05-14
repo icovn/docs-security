@@ -76,7 +76,9 @@ Tasks call **modules**
 
 [http://docs.ansible.com/ansible/latest/installation\_guide/intro\_installation.html](http://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 
-http://docs.ansible.com/ansible/latest/modules/modules\_by\_category.html
+[http://docs.ansible.com/ansible/latest/modules/modules\_by\_category.html](http://docs.ansible.com/ansible/latest/modules/modules_by_category.html)
+
+http://docs.ansible.com/ansible/latest/user\_guide/playbooks\_reuse.html
 
 [https://github.com/ansible/hello-world](https://github.com/ansible/hello-world)
 
