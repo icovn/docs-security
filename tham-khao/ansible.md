@@ -34,6 +34,12 @@ ssh-keygen
 ansible all -m ping
 ```
 
+* Cài đặt python 2 trên client
+
+```
+sudo apt install python2.7 python-pip
+```
+
 # 2. Cài đặt Ansible-semaphore \(Open Source alternative to Ansible Tower\)
 
 * Cài đặt mysql server
