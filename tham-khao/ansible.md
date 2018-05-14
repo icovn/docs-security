@@ -34,7 +34,7 @@ ssh-keygen
 ansible all -m ping
 ```
 
-# 2. Cài đặt Ansible-semaphore
+# 2. Cài đặt Ansible-semaphore \(Open Source alternative to Ansible Tower\)
 
 * Cài đặt mysql server
 
