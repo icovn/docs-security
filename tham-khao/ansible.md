@@ -56,5 +56,33 @@ cd /etc/ansible/roles
 git clone https://github.com/wazuh/wazuh-ansible.git .
 ```
 
+# 3. Ghi chú
 
+**Playsbooks** contain **plays**
+
+Plays contain **tasks**
+
+Tasks call **modules**
+
+
+
+**Tasks** run **sequentially**
+
+
+
+**Handlers** are triggered by **tasks**, and are run oncce, at the end of plays
+
+# 4. Tham khảo
+
+[https://www.ansible.com/resources/get-started](https://www.ansible.com/resources/get-started)
+
+[https://github.com/ansible/ansible-doctor](https://github.com/ansible/ansible-doctor)
+
+[http://docs.ansible.com/ansible/latest/installation\_guide/intro\_installation.html](http://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+
+[https://github.com/ansible/hello-world](https://github.com/ansible/hello-world)
+
+[https://github.com/ansible/ansible-examples](https://github.com/ansible/ansible-examples)
+
+[https://github.com/ansible/ansible-kubernetes-modules](https://github.com/ansible/ansible-kubernetes-modules)
 
