@@ -148,6 +148,40 @@ ansible all -m apt -a "name=mlocate state=latest" -b
 
 ##Ensure a package is not installed:
 ansible all -m apt -a "name=mlocate state=absent" -b
+
+
+#Users and Group
+ansible all -m user -a "name=foo password=<crypted password here>
+ansible all -m user -a "name=foo state=absent"
+
+
+#Deploying From Source Contro
+ansible webservers -m git -a "repo=https://foo.example.org/repo.git dest=/srv/myapp version=HEAD"
+
+
+#Managing Services
+
+##Managing Services
+ansible webservers -m service -a "name=httpd state=started"
+
+##Alternatively, restart a service on all webservers
+ansible webservers -m service -a "name=httpd state=restarted"
+
+##Ensure a service is stopped
+ansible webservers -m service -a "name=httpd state=stopped"
+
+
+#Time Limited Background Operations
+
+##ong running operations can be run in the background, and it is possible to check their status later. For example, to execute long_running_operation asynchronously in the background, with a timeout of 3600 seconds (-B), and without polling (-P)
+ansible all -B 3600 -P 0 -a "/usr/bin/long_running_operation --do-stuff"
+
+##If you do decide you want to check on the job status later, you can use the async_status module, passing it the job id that was returned when you ran the original job in the background
+ansible web1.example.com -m async_status -a "jid=488359678239.2844"
+
+##Polling is built-in and looks like this 
+ansible all -B 1800 -P 60 -a "/usr/bin/long_running_operation --do-stuff"
+##The above example says “run for 30 minutes max (-B 30*60=1800), poll for status (-P) every 60 seconds”
 ```
 
 * ansible-config
