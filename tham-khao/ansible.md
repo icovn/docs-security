@@ -125,6 +125,9 @@ ansible ungrouped -a "free -m"
 
 #copy file from Manager
 ansible all -m copy -a "src=/etc/hosts dest=/tmp/hosts"
+
+#get content of remote file
+ansible all -a "cat /tmp/hosts"
 ```
 
 * ansible-config
