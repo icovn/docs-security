@@ -111,23 +111,43 @@ Tasks call **modules**
 ```
 ansible <host-pattern> [options]
 
-#check ram
+#Adhoc command
+
+##check ram
 ansible 210.245* -a "free -m"
 
-#get hostname
+##get hostname
 ansible all -a "hostname"
 
-#get process of sondt2
+##get process of sondt2
 ansible all -a "ps aux | grep sondt2"
 
-#check ram in ungrouped
+##check ram in ungrouped
 ansible ungrouped -a "free -m"
 
-#copy file from Manager
+
+#File Transfer
+
+##copy file from Manager
 ansible all -m copy -a "src=/etc/hosts dest=/tmp/hosts"
 
-#get content of remote file
+##get content of remote file
 ansible all -a "cat /tmp/hosts"
+
+
+#Managing Packages
+
+##Ensure a package is installed, but don’t update it
+ansible all -m apt -a "name=mlocate state=absent" -b
+
+##Ensure a package is installed to a specific version
+ansible all -m apt -a "name=mlocate state=present" -b
+
+##Ensure a package is at the latest version
+ansible all -m apt -a "name=mlocate state=latest" -b
+
+##Ensure a package is not installed:
+ansible all -m apt -a "name=mlocate state=absent" -b
 ```
 
 * ansible-config
