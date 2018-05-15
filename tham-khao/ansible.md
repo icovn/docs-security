@@ -111,10 +111,20 @@ Tasks call **modules**
 ```
 ansible <host-pattern> [options]
 
+#check ram
 ansible 210.245* -a "free -m"
+
+#get hostname
 ansible all -a "hostname"
+
+#get process of sondt2
 ansible all -a "ps aux | grep sondt2"
+
+#check ram in ungrouped
 ansible ungrouped -a "free -m"
+
+#copy file from Manager
+ansible all -m copy -a "src=/etc/hosts dest=/tmp/hosts"
 ```
 
 * ansible-config
