@@ -90,6 +90,8 @@ Tasks call **modules**
 
   * [https://www.ansible.com/resources/get-started](#)
 
+  * http://docs.ansible.com/ansible/latest/user\_guide/playbooks.html
+
   * [http://docs.ansible.com/ansible/latest/modules/modules\_by\_category.html](http://docs.ansible.com/ansible/latest/modules/modules_by_category.html)
 
   * [http://docs.ansible.com/ansible/latest/user\_guide/playbooks\_reuse.html](http://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse.html)
@@ -102,5 +104,42 @@ Tasks call **modules**
 
   * [https://github.com/ansible/ansible-kubernetes-modules](#)
 
+# 6. Các lệnh cơ bản
+
+* ansible
+
+```
+ansible <host-pattern> [options]
+
+ansible 210.245* -a "free -m"
+ansible all -a "hostname"
+ansible all -a "ps aux | grep sondt2"
+```
+
+* ansible-config
+
+```
+ansible-config [view|dump|list] [--help] [options] [ansible.cfg]
+```
+
+* ansible-console
+
+```
+ansible-console [<host-pattern>] [options]
+
+ansible-console all
+ps aux | grep sondt2
+exit
+```
+
+* ansible-playbook
+
+```
+ansible-playbook [options] playbook.yml [playbook2 ...]
+
+
+```
+
+* 
 
 
