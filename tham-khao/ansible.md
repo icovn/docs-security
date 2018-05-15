@@ -90,7 +90,7 @@ Tasks call **modules**
 
   * [https://www.ansible.com/resources/get-started](#)
 
-  * http://docs.ansible.com/ansible/latest/user\_guide/playbooks.html
+  * [http://docs.ansible.com/ansible/latest/user\_guide/playbooks.html](http://docs.ansible.com/ansible/latest/user_guide/playbooks.html)
 
   * [http://docs.ansible.com/ansible/latest/modules/modules\_by\_category.html](http://docs.ansible.com/ansible/latest/modules/modules_by_category.html)
 
@@ -114,6 +114,7 @@ ansible <host-pattern> [options]
 ansible 210.245* -a "free -m"
 ansible all -a "hostname"
 ansible all -a "ps aux | grep sondt2"
+ansible ungrouped -a "free -m"
 ```
 
 * ansible-config
@@ -122,7 +123,7 @@ ansible all -a "ps aux | grep sondt2"
 ansible-config [view|dump|list] [--help] [options] [ansible.cfg]
 ```
 
-* ansible-console
+* **ansible-console**
 
 ```
 ansible-console [<host-pattern>] [options]
@@ -136,8 +137,12 @@ exit
 
 ```
 ansible-playbook [options] playbook.yml [playbook2 ...]
+```
 
+* ansible-pull: pulls playbooks from a VCS repo and executes them for the local host
 
+```
+ansible-pull -U <repository> [options] [<playbook.yml>]
 ```
 
 * 
