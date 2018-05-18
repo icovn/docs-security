@@ -46,5 +46,4 @@
   * [Tool](tham-khao/tool.md)
   * [Wahuz](tham-khao/wahuz.md)
   * [Wireshark](tham-khao/wireshark.md)
-  * OpenVidu
 
