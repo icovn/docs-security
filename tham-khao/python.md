@@ -19,6 +19,13 @@ set FLASK_ENV=development
 flask run
 ```
 
-* 
+* Cài đặt Flask Oauth
+
+```
+pip install Flask-OAuth
+```
+
+* sadfasdf
+
 
 
