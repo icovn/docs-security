@@ -19,7 +19,7 @@ set FLASK_ENV=development
 flask run
 ```
 
-* Cài đặt Flask Oauth
+* Cài đặt Flask-Oauth
 
 ```
 pip install Flask-OAuth
