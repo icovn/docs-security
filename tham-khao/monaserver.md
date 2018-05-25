@@ -20,9 +20,10 @@ wget https://github.com/MonaSolutions/MonaServer/archive/1.2.zip
 unzip 1.2.zip
 cd MonaServer-1.2/
 make
+sudo mv MonaBase/lib/libMonaBase.so /usr/local/lib
+sudo mv MonaCore/lib/libMonaCore.so /usr/local/lib
+sudo ldconfig
 ```
-
-
 
 
 
