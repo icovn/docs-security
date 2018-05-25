@@ -1,4 +1,4 @@
-* Cài đặt LuaJIT \(http://www.monaserver.ovh/installation.html\#luajit-installation\)
+* Cài đặt LuaJIT \([http://www.monaserver.ovh/installation.html\#luajit-installation\](http://www.monaserver.ovh/installation.html#luajit-installation\)\)
 
 ```
 wget http://luajit.org/download/LuaJIT-2.0.5.tar.gz
@@ -15,5 +15,13 @@ sudo make install
 
 * Cài đặt MonaServer
 
+```
+wget https://github.com/MonaSolutions/MonaServer/archive/1.2.zip
+unzip 1.2.zip
+cd MonaServer-1.2/
+make
+```
+
+* 
 
 
