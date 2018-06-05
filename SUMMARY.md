@@ -41,6 +41,7 @@
   * [OpenVidu](tham-khao/openvidu.md)
   * [Osquery](tham-khao/osquery.md)
   * [OSSEC](tham-khao/ossec.md)
+  * [Prometheus](tham-khao/prometheus.md)
   * [Python](tham-khao/python.md)
   * [Redis](tham-khao/redis.md)
   * [Rundeck](tham-khao/rundeck.md)
